@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:sbol="http://sbol.bhi.washington.edu/rdf/sbol.owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description rdf:about="http://sbol.bhi.washington.edu/rdf/sbol.owl#rQprqhqP12083">
+	<sbol:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-10-18</sbol:date>
+	<rdf:type rdf:resource="http://sbol.bhi.washington.edu/rdf/sbol.owl#Part"/>
+	<sbol:shortDescription>E22</sbol:shortDescription>
+	<sbol:name>BBa_K273029</sbol:name>
+	<sbol:dnaSequence>gggcatgaaaatgtcgtaaatcatggtggt</sbol:dnaSequence>
+	<sbol:author>Karl Brune</sbol:author>
+	<sbol:nickname>E22</sbol:nickname>
+	<sbol:longDescription>.</sbol:longDescription>
+	<sbol:type>RNA</sbol:type>
+	<sbol:status>Planning</sbol:status>
+</rdf:Description>
+</rdf:RDF>

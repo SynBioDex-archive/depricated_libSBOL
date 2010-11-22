@@ -1,0 +1,4220 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY SO "http://purl.org/obo/owl/SO#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY sbol "http://sbol.bhi.washington.edu/rdf/sbol.owl#" >
+    <!ENTITY sbol10 "http://sbol.bhi.washington.edu/rdf/sbol.owl#5" >
+    <!ENTITY sbol8 "http://sbol.bhi.washington.edu/rdf/sbol.owl#4" >
+    <!ENTITY sbol9 "http://sbol.bhi.washington.edu/rdf/sbol.owl#3" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+    <!ENTITY sbol7 "http://sbol.bhi.washington.edu/rdf/sbol.owl#28" >
+    <!ENTITY sbol3 "http://sbol.bhi.washington.edu/rdf/sbol.owl#23" >
+    <!ENTITY sbol2 "http://sbol.bhi.washington.edu/rdf/sbol.owl#37" >
+    <!ENTITY sbol5 "http://sbol.bhi.washington.edu/rdf/sbol.owl#25" >
+    <!ENTITY sbol4 "http://sbol.bhi.washington.edu/rdf/sbol.owl#10" >
+    <!ENTITY sbol6 "http://sbol.bhi.washington.edu/rdf/sbol.owl#21" >
+]>
+
+
+<rdf:RDF xmlns="http://sbol.bhi.washington.edu/rdf/sbol.owl#"
+     xml:base="http://sbol.bhi.washington.edu/rdf/sbol.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:sbol6="&sbol;21"
+     xmlns:sbol2="&sbol;37"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:sbol5="&sbol;25"
+     xmlns:sbol3="&sbol;23"
+     xmlns:SO="http://purl.org/obo/owl/SO#"
+     xmlns:sbol="http://sbol.bhi.washington.edu/rdf/sbol.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:sbol9="&sbol;3"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sbol4="&sbol;10"
+     xmlns:sbol8="&sbol;4"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:sbol7="&sbol;28"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sbol10="&sbol;5">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000412"/>
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasDefinition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#annotation -->
+
+    <owl:ObjectProperty rdf:about="#annotation">
+        <rdfs:domain rdf:resource="#Part"/>
+        <rdfs:range rdf:resource="#SequenceAnnotation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#assemblyFormat -->
+
+    <owl:ObjectProperty rdf:about="#assemblyFormat">
+        <rdfs:range rdf:resource="#AssemblyFormat"/>
+        <rdfs:domain rdf:resource="#Part"/>
+        <rdfs:domain rdf:resource="#Vector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#cell -->
+
+    <owl:ObjectProperty rdf:about="#cell">
+        <rdfs:range rdf:resource="#Cell"/>
+        <rdfs:domain rdf:resource="#DNASample"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#dna -->
+
+    <owl:ObjectProperty rdf:about="#dna">
+        <rdfs:domain rdf:resource="#DNASample"/>
+        <rdfs:range rdf:resource="#PhysicalDNA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#feature -->
+
+    <owl:ObjectProperty rdf:about="#feature">
+        <rdfs:domain rdf:resource="#SequenceAnnotation"/>
+        <rdfs:range rdf:resource="#SequenceFeature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#part -->
+
+    <owl:ObjectProperty rdf:about="#part">
+        <rdfs:range rdf:resource="#Part"/>
+        <rdfs:domain rdf:resource="#PhysicalDNA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#subPart -->
+
+    <owl:ObjectProperty rdf:about="#subPart">
+        <rdfs:domain rdf:resource="#Part"/>
+        <rdfs:range rdf:resource="#Part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#vector -->
+
+    <owl:ObjectProperty rdf:about="#vector">
+        <rdfs:domain rdf:resource="#PhysicalDNA"/>
+        <rdfs:range rdf:resource="#Vector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#author -->
+
+    <owl:DatatypeProperty rdf:about="#author">
+        <rdfs:domain rdf:resource="#Part"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#concentration -->
+
+    <owl:DatatypeProperty rdf:about="#concentration">
+        <rdfs:domain rdf:resource="#DNASample"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#date -->
+
+    <owl:DatatypeProperty rdf:about="#date">
+        <rdfs:range rdf:resource="&xsd;date"/>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#dnaSequence -->
+
+    <owl:DatatypeProperty rdf:about="#dnaSequence">
+        <rdfs:domain rdf:resource="#Part"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#end -->
+
+    <owl:DatatypeProperty rdf:about="#end">
+        <rdfs:domain rdf:resource="#SequenceAnnotation"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#isCircular -->
+
+    <owl:DatatypeProperty rdf:about="#isCircular">
+        <rdfs:domain rdf:resource="#PhysicalDNA"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#label -->
+
+    <owl:DatatypeProperty rdf:about="#label">
+        <rdfs:domain rdf:resource="#DNASample"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#longDescription -->
+
+    <owl:DatatypeProperty rdf:about="#longDescription">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#name -->
+
+    <owl:DatatypeProperty rdf:about="#name">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#prefix -->
+
+    <owl:DatatypeProperty rdf:about="#prefix">
+        <rdfs:domain rdf:resource="#AssemblyFormat"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#rfc -->
+
+    <owl:DatatypeProperty rdf:about="#rfc">
+        <rdfs:domain rdf:resource="#AssemblyFormat"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#selfScar -->
+
+    <owl:DatatypeProperty rdf:about="#selfScar">
+        <rdfs:domain rdf:resource="#AssemblyFormat"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#shortDescription -->
+
+    <owl:DatatypeProperty rdf:about="#shortDescription">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#start -->
+
+    <owl:DatatypeProperty rdf:about="#start">
+        <rdfs:domain rdf:resource="#SequenceAnnotation"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#strand -->
+
+    <owl:DatatypeProperty rdf:about="#strand">
+        <rdfs:domain rdf:resource="#SequenceAnnotation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#suffix -->
+
+    <owl:DatatypeProperty rdf:about="#suffix">
+        <rdfs:domain rdf:resource="#AssemblyFormat"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000001 -->
+
+    <owl:Class rdf:about="&SO;SO_0000001">
+        <rdfs:label xml:lang="en">region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000110"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid1</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000057 -->
+
+    <owl:Class rdf:about="&SO;SO_0000057">
+        <rdfs:label xml:lang="en">operator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000752"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid17</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000110 -->
+
+    <owl:Class rdf:about="&SO;SO_0000110">
+        <rdfs:label xml:lang="en"
+            >sequence_feature</rdfs:label>
+        <owl:equivalentClass rdf:resource="#SequenceFeature"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid24</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000167 -->
+
+    <owl:Class rdf:about="&SO;SO_0000167">
+        <rdfs:label xml:lang="en">promoter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0005836"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid13</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000235 -->
+
+    <owl:Class rdf:about="&SO;SO_0000235">
+        <rdfs:label xml:lang="en">TF_binding_site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000409"/>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0005836"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid38</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000296 -->
+
+    <owl:Class rdf:about="&SO;SO_0000296">
+        <rdfs:label xml:lang="en"
+            >origin_of_replication</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0001411"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid15</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000313 -->
+
+    <owl:Class rdf:about="&SO;SO_0000313">
+        <rdfs:label xml:lang="en">stem_loop</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0001411"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid2</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000316 -->
+
+    <owl:Class rdf:about="&SO;SO_0000316">
+        <rdfs:label xml:lang="en">CDS</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000836"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid25</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000318 -->
+
+    <owl:Class rdf:about="&SO;SO_0000318">
+        <rdfs:label xml:lang="en">start_codon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000360"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid28</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000319 -->
+
+    <owl:Class rdf:about="&SO;SO_0000319">
+        <rdfs:label xml:lang="en">stop_codon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000360"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid35</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000324 -->
+
+    <owl:Class rdf:about="&SO;SO_0000324">
+        <rdfs:label xml:lang="en">tag</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000001"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid18</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000330 -->
+
+    <owl:Class rdf:about="&SO;SO_0000330">
+        <rdfs:label xml:lang="en"
+            >conserved_region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000001"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid19</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000360 -->
+
+    <owl:Class rdf:about="&SO;SO_0000360">
+        <rdfs:label xml:lang="en">codon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000836"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid29</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000409 -->
+
+    <owl:Class rdf:about="&SO;SO_0000409">
+        <rdfs:label xml:lang="en">binding_site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0001411"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid34</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000552 -->
+
+    <owl:Class rdf:about="&SO;SO_0000552">
+        <rdfs:label xml:lang="en"
+            >Shine_Dalgarno_sequence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000836"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid4</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000610 -->
+
+    <owl:Class rdf:about="&SO;SO_0000610">
+        <rdfs:label xml:lang="en">polyA_sequence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0001411"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid7</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000614 -->
+
+    <owl:Class rdf:about="&SO;SO_0000614">
+        <rdfs:label xml:lang="en"
+            >bacterial_terminator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000752"/>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0005836"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid5</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000752 -->
+
+    <owl:Class rdf:about="&SO;SO_0000752">
+        <rdfs:label xml:lang="en"
+            >gene_group_regulatory_region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0005836"/>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000836 -->
+
+    <owl:Class rdf:about="&SO;SO_0000836">
+        <rdfs:label xml:lang="en">mRNA_region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0001411"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid21</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0001017 -->
+
+    <owl:Class rdf:about="&SO;SO_0001017">
+        <rdfs:label xml:lang="en">silent_mutation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0001060"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid37</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0001059 -->
+
+    <owl:Class rdf:about="&SO;SO_0001059">
+        <rdfs:label xml:lang="en"
+            >sequence_alteration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000110"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid33</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0001060 -->
+
+    <owl:Class rdf:about="&SO;SO_0001060">
+        <rdfs:label xml:lang="en"
+            >sequence_variant</rdfs:label>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid8</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0001411 -->
+
+    <owl:Class rdf:about="&SO;SO_0001411">
+        <rdfs:label xml:lang="en"
+            >biological_region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000001"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid3</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0005836 -->
+
+    <owl:Class rdf:about="&SO;SO_0005836">
+        <rdfs:label xml:lang="en"
+            >regulatory_region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0001411"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid26</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0005850 -->
+
+    <owl:Class rdf:about="&SO;SO_0005850">
+        <rdfs:label xml:lang="en"
+            >primer_binding_site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000409"/>
+        <oboInOwl:hasDefinition rdf:datatype="&xsd;anyURI"
+            >http://ontofox.hegroup.org/nxn2pksa.out.owl#genid6</oboInOwl:hasDefinition>
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#10_standard -->
+
+    <owl:Class rdf:about="#10_standard">
+        <rdfs:subClassOf rdf:resource="#standard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#10_version_plasmidbackbone -->
+
+    <owl:Class rdf:about="#10_version_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#21_standard -->
+
+    <owl:Class rdf:about="#21_standard">
+        <rdfs:subClassOf rdf:resource="#standard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#23_standard -->
+
+    <owl:Class rdf:about="#23_standard">
+        <rdfs:subClassOf rdf:resource="#standard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#23regulator_standard -->
+
+    <owl:Class rdf:about="#23regulator_standard">
+        <rdfs:subClassOf rdf:resource="#standard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#23regulatortranscriptional_standard -->
+
+    <owl:Class rdf:about="#23regulatortranscriptional_standard">
+        <rdfs:subClassOf rdf:resource="#standard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#25_standard -->
+
+    <owl:Class rdf:about="#25_standard">
+        <rdfs:subClassOf rdf:resource="#standard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#28_standard -->
+
+    <owl:Class rdf:about="#28_standard">
+        <rdfs:subClassOf rdf:resource="#standard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#37_standard -->
+
+    <owl:Class rdf:about="#37_standard">
+        <rdfs:subClassOf rdf:resource="#standard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#3_version_plasmidbackbone -->
+
+    <owl:Class rdf:about="#3_version_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#4_version_plasmidbackbone -->
+
+    <owl:Class rdf:about="#4_version_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#5_version_plasmidbackbone -->
+
+    <owl:Class rdf:about="#5_version_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#AssemblyFormat -->
+
+    <owl:Class rdf:about="#AssemblyFormat"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#Cell -->
+
+    <owl:Class rdf:about="#Cell"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#DNASample -->
+
+    <owl:Class rdf:about="#DNASample"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#Device -->
+
+    <owl:Class rdf:about="#Device">
+        <rdfs:subClassOf rdf:resource="#Part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#Part -->
+
+    <owl:Class rdf:about="#Part"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#PhysicalDNA -->
+
+    <owl:Class rdf:about="#PhysicalDNA"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#Plasmid -->
+
+    <owl:Class rdf:about="#Plasmid">
+        <rdfs:subClassOf rdf:resource="#PhysicalDNA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#SequenceAnnotation -->
+
+    <owl:Class rdf:about="#SequenceAnnotation"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#SequenceFeature -->
+
+    <owl:Class rdf:about="#SequenceFeature"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#Vector -->
+
+    <owl:Class rdf:about="#Vector">
+        <rdfs:subClassOf rdf:resource="#Part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#_davidson_igem2006 -->
+
+    <owl:Class rdf:about="#_davidson_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#activator_transcriptionalregulator_cds -->
+
+    <owl:Class rdf:about="#activator_transcriptionalregulator_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#aferrooxidans_chassis -->
+
+    <owl:Class rdf:about="#aferrooxidans_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#aferrooxidans_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#aferrooxidans_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#affinity_proteindomain -->
+
+    <owl:Class rdf:about="#affinity_proteindomain">
+        <rdfs:subClassOf rdf:resource="#proteindomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#affinity_proteintag -->
+
+    <owl:Class rdf:about="#affinity_proteintag">
+        <rdfs:subClassOf rdf:resource="#proteintag"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#agra_cellsignalling_function -->
+
+    <owl:Class rdf:about="#agra_cellsignalling_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#ahl_biosynthesis_function -->
+
+    <owl:Class rdf:about="#ahl_biosynthesis_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#ahl_degradation_function -->
+
+    <owl:Class rdf:about="#ahl_degradation_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#amplification_part_primer -->
+
+    <owl:Class rdf:about="#amplification_part_primer">
+        <rdfs:subClassOf rdf:resource="#primer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#amplification_plasmid_primer -->
+
+    <owl:Class rdf:about="#amplification_plasmid_primer">
+        <rdfs:subClassOf rdf:resource="#primer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#anderson_constitutive_prokaryote_rbs -->
+
+    <owl:Class rdf:about="#anderson_constitutive_prokaryote_rbs">
+        <rdfs:subClassOf rdf:resource="#rbs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#anderson_promoter -->
+
+    <owl:Class rdf:about="#anderson_promoter">
+        <rdfs:subClassOf rdf:resource="#promoter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#antibioticresistance_selectionmarker_cds -->
+
+    <owl:Class rdf:about="#antibioticresistance_selectionmarker_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#antibioticresistance_selectionmarker_component_plasmidbackbone -->
+
+    <owl:Class rdf:about="#antibioticresistance_selectionmarker_component_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#antibody_receptor_cds -->
+
+    <owl:Class rdf:about="#antibody_receptor_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#aptamer_dna -->
+
+    <owl:Class rdf:about="#aptamer_dna">
+        <rdfs:subClassOf rdf:resource="#dna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#archive_plasmidbackbone -->
+
+    <owl:Class rdf:about="#archive_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#assembly_plasmidbackbone -->
+
+    <owl:Class rdf:about="#assembly_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#bcepacia_prokaryote_chassis -->
+
+    <owl:Class rdf:about="#bcepacia_prokaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#bcepacia_prokaryote_ribosome -->
+
+    <owl:Class rdf:about="#bcepacia_prokaryote_ribosome">
+        <rdfs:subClassOf rdf:resource="#ribosome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#bidirectional_direction -->
+
+    <owl:Class rdf:about="#bidirectional_direction">
+        <rdfs:subClassOf rdf:resource="#direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#binding_proteindomain -->
+
+    <owl:Class rdf:about="#binding_proteindomain">
+        <rdfs:subClassOf rdf:resource="#proteindomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#biobrickfriendly_standard -->
+
+    <owl:Class rdf:about="#biobrickfriendly_standard">
+        <rdfs:subClassOf rdf:resource="#standard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#biofuels_function -->
+
+    <owl:Class rdf:about="#biofuels_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#bioscaffold_dna -->
+
+    <owl:Class rdf:about="#bioscaffold_dna">
+        <rdfs:subClassOf rdf:resource="#dna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#biosynthesis_cds -->
+
+    <owl:Class rdf:about="#biosynthesis_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#biosynthesis_function -->
+
+    <owl:Class rdf:about="#biosynthesis_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#bisphenol_degradation_function -->
+
+    <owl:Class rdf:about="#bisphenol_degradation_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#bsubtilis_prokaryote_chassis -->
+
+    <owl:Class rdf:about="#bsubtilis_prokaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#bsubtilis_prokaryote_ribosome -->
+
+    <owl:Class rdf:about="#bsubtilis_prokaryote_ribosome">
+        <rdfs:subClassOf rdf:resource="#ribosome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#butanol_biosynthesis_function -->
+
+    <owl:Class rdf:about="#butanol_biosynthesis_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#cds -->
+
+    <owl:Class rdf:about="#cds">
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000316"/>
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#celldeath_function -->
+
+    <owl:Class rdf:about="#celldeath_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#cellsignalling_function -->
+
+    <owl:Class rdf:about="#cellsignalling_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#cellulose_degradation_function -->
+
+    <owl:Class rdf:about="#cellulose_degradation_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#cfp_reporter_primer -->
+
+    <owl:Class rdf:about="#cfp_reporter_primer">
+        <rdfs:subClassOf rdf:resource="#primer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#channel_membrane_cds -->
+
+    <owl:Class rdf:about="#channel_membrane_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#chassis -->
+
+    <owl:Class rdf:about="#chassis"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#chromatinremodeling_cds -->
+
+    <owl:Class rdf:about="#chromatinremodeling_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#chromatinremodeling_enzyme_cds -->
+
+    <owl:Class rdf:about="#chromatinremodeling_enzyme_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#chromosomalintegration_dna -->
+
+    <owl:Class rdf:about="#chromosomalintegration_dna">
+        <rdfs:subClassOf rdf:resource="#dna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#chromosomalintegration_plasmid -->
+
+    <owl:Class rdf:about="#chromosomalintegration_plasmid">
+        <rdfs:subClassOf rdf:resource="#plasmid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#cinr_cellsignalling_function -->
+
+    <owl:Class rdf:about="#cinr_cellsignalling_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#classic -->
+
+    <owl:Class rdf:about="#classic"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#cleavage_proteindomain -->
+
+    <owl:Class rdf:about="#cleavage_proteindomain">
+        <rdfs:subClassOf rdf:resource="#proteindomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#cloningsite_component_plasmid -->
+
+    <owl:Class rdf:about="#cloningsite_component_plasmid">
+        <rdfs:subClassOf rdf:resource="#plasmid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#cloningsite_dna -->
+
+    <owl:Class rdf:about="#cloningsite_dna">
+        <rdfs:subClassOf rdf:resource="#dna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#codingsequence_libraryscreening_plasmidbackbone -->
+
+    <owl:Class rdf:about="#codingsequence_libraryscreening_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#coliroid_function -->
+
+    <owl:Class rdf:about="#coliroid_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#color_reporter_function -->
+
+    <owl:Class rdf:about="#color_reporter_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#community_constitutive_prokaryote_rbs -->
+
+    <owl:Class rdf:about="#community_constitutive_prokaryote_rbs">
+        <rdfs:subClassOf rdf:resource="#rbs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#conjugation_dna -->
+
+    <owl:Class rdf:about="#conjugation_dna">
+        <rdfs:subClassOf rdf:resource="#dna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#conjugation_function -->
+
+    <owl:Class rdf:about="#conjugation_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#constitutive_constitutive_prokaryote_rbs -->
+
+    <owl:Class rdf:about="#constitutive_constitutive_prokaryote_rbs">
+        <rdfs:subClassOf rdf:resource="#rbs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#constitutive_expression_plasmidbackbone -->
+
+    <owl:Class rdf:about="#constitutive_expression_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#constitutive_regulation -->
+
+    <owl:Class rdf:about="#constitutive_regulation">
+        <rdfs:subClassOf rdf:resource="#regulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#constitutive_reporter_classic -->
+
+    <owl:Class rdf:about="#constitutive_reporter_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#construction_plasmid -->
+
+    <owl:Class rdf:about="#construction_plasmid">
+        <rdfs:subClassOf rdf:resource="#plasmid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#copper_metalsensing_function -->
+
+    <owl:Class rdf:about="#copper_metalsensing_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#cre_recombination_function -->
+
+    <owl:Class rdf:about="#cre_recombination_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#custom_prokaryote_ribosome -->
+
+    <owl:Class rdf:about="#custom_prokaryote_ribosome">
+        <rdfs:subClassOf rdf:resource="#ribosome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#cyanobacterium_prokaryote_chassis -->
+
+    <owl:Class rdf:about="#cyanobacterium_prokaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#defaultinsert_component_plasmidbackbone -->
+
+    <owl:Class rdf:about="#defaultinsert_component_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#degradation_function -->
+
+    <owl:Class rdf:about="#degradation_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#degradation_proteindomain -->
+
+    <owl:Class rdf:about="#degradation_proteindomain">
+        <rdfs:subClassOf rdf:resource="#proteindomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#degradation_proteintag -->
+
+    <owl:Class rdf:about="#degradation_proteintag">
+        <rdfs:subClassOf rdf:resource="#proteintag"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#direction -->
+
+    <owl:Class rdf:about="#direction">
+        <rdfs:subClassOf rdf:resource="#direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#dna -->
+
+    <owl:Class rdf:about="#dna"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#dna_function -->
+
+    <owl:Class rdf:about="#dna_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#dnabinding_cds -->
+
+    <owl:Class rdf:about="#dnabinding_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#dnabinding_proteindomain -->
+
+    <owl:Class rdf:about="#dnabinding_proteindomain">
+        <rdfs:subClassOf rdf:resource="#proteindomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#dnapolymerase_enzyme_cds -->
+
+    <owl:Class rdf:about="#dnapolymerase_enzyme_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#dnase_enzyme_cds -->
+
+    <owl:Class rdf:about="#dnase_enzyme_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#double_terminator -->
+
+    <owl:Class rdf:about="#double_terminator">
+        <rdfs:subClassOf rdf:resource="#terminator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#ecoli_prokaryote_chassis -->
+
+    <owl:Class rdf:about="#ecoli_prokaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#ecoli_prokaryote_ribosome -->
+
+    <owl:Class rdf:about="#ecoli_prokaryote_ribosome">
+        <rdfs:subClassOf rdf:resource="#ribosome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#ecoli_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#ecoli_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#endonuclease_enzyme_cds -->
+
+    <owl:Class rdf:about="#endonuclease_enzyme_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#enzyme_cds -->
+
+    <owl:Class rdf:about="#enzyme_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#eukaryote_chassis -->
+
+    <owl:Class rdf:about="#eukaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#eukaryote_rnap -->
+
+    <owl:Class rdf:about="#eukaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#exonuclease_enzyme_cds -->
+
+    <owl:Class rdf:about="#exonuclease_enzyme_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#expression_plasmid -->
+
+    <owl:Class rdf:about="#expression_plasmid">
+        <rdfs:subClassOf rdf:resource="#plasmid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#extracellular_membrane_cds -->
+
+    <owl:Class rdf:about="#extracellular_membrane_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_berkeley_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_berkeley_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_berkeley_uc_igem08_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_berkeley_uc_igem08_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_bologna_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_bologna_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_brown_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_brown_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_brown_igem2007 -->
+
+    <owl:Class rdf:about="#favorite_brown_igem2007">
+        <rdfs:subClassOf rdf:resource="#igem2007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_brown_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_brown_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_browntwo_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_browntwo_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_caltech_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_caltech_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_cambridge_igem -->
+
+    <owl:Class rdf:about="#favorite_cambridge_igem">
+        <rdfs:subClassOf rdf:resource="#igem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_cambridge_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_cambridge_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_chiba_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_chiba_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_college_imperial_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_college_imperial_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_cpu-nanjing_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_cpu-nanjing_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_davidson_igem2005 -->
+
+    <owl:Class rdf:about="#favorite_davidson_igem2005">
+        <rdfs:subClassOf rdf:resource="#igem2005"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_davidson_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_davidson_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_duke_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_duke_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_edinburgh_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_edinburgh_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_edinburgh_igem2007 -->
+
+    <owl:Class rdf:about="#favorite_edinburgh_igem2007">
+        <rdfs:subClassOf rdf:resource="#igem2007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_edinburgh_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_edinburgh_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_epf-lausanne_team_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_epf-lausanne_team_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_esbs-strasbourg_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_esbs-strasbourg_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_example_igem2007 -->
+
+    <owl:Class rdf:about="#favorite_example_igem2007">
+        <rdfs:subClassOf rdf:resource="#igem2007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_example_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_example_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_freiburg_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_freiburg_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_guelph_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_guelph_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_harvard_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_harvard_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_harvard_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_harvard_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_illinois_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_illinois_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_imperial_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_imperial_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_imperial_igem2007 -->
+
+    <owl:Class rdf:about="#favorite_imperial_igem2007">
+        <rdfs:subClassOf rdf:resource="#igem2007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_kuleuven_team_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_kuleuven_team_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_kyoto_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_kyoto_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_lab_haseloff_labs -->
+
+    <owl:Class rdf:about="#favorite_lab_haseloff_labs">
+        <rdfs:subClassOf rdf:resource="#labs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_ljubljana_igem2007 -->
+
+    <owl:Class rdf:about="#favorite_ljubljana_igem2007">
+        <rdfs:subClassOf rdf:resource="#igem2007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_mississippistate_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_mississippistate_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_missouri_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_missouri_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_mit_igem2005 -->
+
+    <owl:Class rdf:about="#favorite_mit_igem2005">
+        <rdfs:subClassOf rdf:resource="#igem2005"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_name_team_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_name_team_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_name_team_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_name_team_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_naples_igem2007 -->
+
+    <owl:Class rdf:about="#favorite_naples_igem2007">
+        <rdfs:subClassOf rdf:resource="#igem2007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_ncbs_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_ncbs_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_ncbs_igem2007 -->
+
+    <owl:Class rdf:about="#favorite_ncbs_igem2007">
+        <rdfs:subClassOf rdf:resource="#igem2007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_nint_alberta_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_nint_alberta_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_ntu-singapore_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_ntu-singapore_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_pennstate_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_pennstate_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_slovenia_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_slovenia_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_slovenia_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_slovenia_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_state_penn_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_state_penn_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_team_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_team_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_texas_igem2005 -->
+
+    <owl:Class rdf:about="#favorite_texas_igem2005">
+        <rdfs:subClassOf rdf:resource="#igem2005"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_texas_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_texas_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_tokyo_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_tokyo_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_tokyo_igem2006_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_tokyo_igem2006_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_tudelft_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_tudelft_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_ucsf_igem2007 -->
+
+    <owl:Class rdf:about="#favorite_ucsf_igem2007">
+        <rdfs:subClassOf rdf:resource="#igem2007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_ucsf_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_ucsf_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_unipv-pavia_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_unipv-pavia_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_valencia_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_valencia_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_view_prairie_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_view_prairie_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_w_missouri_davidson_igem2007 -->
+
+    <owl:Class rdf:about="#favorite_w_missouri_davidson_igem2007">
+        <rdfs:subClassOf rdf:resource="#igem2007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_warsaw_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_warsaw_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_wetware_calgary_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_wetware_calgary_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_wisconsin_igem2008 -->
+
+    <owl:Class rdf:about="#favorite_wisconsin_igem2008">
+        <rdfs:subClassOf rdf:resource="#igem2008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorite_zurich_eth_igem2006 -->
+
+    <owl:Class rdf:about="#favorite_zurich_eth_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#favorites_mit_igem2006 -->
+
+    <owl:Class rdf:about="#favorites_mit_igem2006">
+        <rdfs:subClassOf rdf:resource="#igem2006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#fim_recombination_function -->
+
+    <owl:Class rdf:about="#fim_recombination_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#flp_recombination_function -->
+
+    <owl:Class rdf:about="#flp_recombination_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#fluorescence_reporter_function -->
+
+    <owl:Class rdf:about="#fluorescence_reporter_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#forward_direction -->
+
+    <owl:Class rdf:about="#forward_direction">
+        <rdfs:subClassOf rdf:resource="#direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#fret_function -->
+
+    <owl:Class rdf:about="#fret_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#function -->
+
+    <owl:Class rdf:about="#function"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#gfp_reporter_primer -->
+
+    <owl:Class rdf:about="#gfp_reporter_primer">
+        <rdfs:subClassOf rdf:resource="#primer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#h_o_measurement_classic -->
+
+    <owl:Class rdf:about="#h_o_measurement_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#head_proteindomain -->
+
+    <owl:Class rdf:about="#head_proteindomain">
+        <rdfs:subClassOf rdf:resource="#proteindomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#heme_biosynthesis_function -->
+
+    <owl:Class rdf:about="#heme_biosynthesis_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#high_copynumber_plasmidbackbone -->
+
+    <owl:Class rdf:about="#high_copynumber_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#hin_recombination_function -->
+
+    <owl:Class rdf:about="#hin_recombination_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#human_eukaryote_chassis -->
+
+    <owl:Class rdf:about="#human_eukaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#igem -->
+
+    <owl:Class rdf:about="#igem"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#igem2005 -->
+
+    <owl:Class rdf:about="#igem2005"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#igem2006 -->
+
+    <owl:Class rdf:about="#igem2006"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#igem2007 -->
+
+    <owl:Class rdf:about="#igem2007"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#igem2008 -->
+
+    <owl:Class rdf:about="#igem2008"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#immunology_function -->
+
+    <owl:Class rdf:about="#immunology_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#inducible_copynumber_plasmidbackbone -->
+
+    <owl:Class rdf:about="#inducible_copynumber_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#inducible_expression_plasmidbackbone -->
+
+    <owl:Class rdf:about="#inducible_expression_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#insulation_component_plasmid -->
+
+    <owl:Class rdf:about="#insulation_component_plasmid">
+        <rdfs:subClassOf rdf:resource="#plasmid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#internal_proteindomain -->
+
+    <owl:Class rdf:about="#internal_proteindomain">
+        <rdfs:subClassOf rdf:resource="#proteindomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#iron_metalsensing_function -->
+
+    <owl:Class rdf:about="#iron_metalsensing_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#iron_promoter -->
+
+    <owl:Class rdf:about="#iron_promoter">
+        <rdfs:subClassOf rdf:resource="#promoter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#isoprenoid_biosynthesis_function -->
+
+    <owl:Class rdf:about="#isoprenoid_biosynthesis_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#issacs_regulated_prokaryote_rbs -->
+
+    <owl:Class rdf:about="#issacs_regulated_prokaryote_rbs">
+        <rdfs:subClassOf rdf:resource="#rbs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#labs -->
+
+    <owl:Class rdf:about="#labs"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#lactobacillus_prokaryote_chassis -->
+
+    <owl:Class rdf:about="#lactobacillus_prokaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#lambda_recombination_function -->
+
+    <owl:Class rdf:about="#lambda_recombination_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#lasi_cellsignalling_function -->
+
+    <owl:Class rdf:about="#lasi_cellsignalling_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#lasr_cellsignalling_function -->
+
+    <owl:Class rdf:about="#lasr_cellsignalling_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#lead_metalsensing_function -->
+
+    <owl:Class rdf:about="#lead_metalsensing_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#lead_sensor_function -->
+
+    <owl:Class rdf:about="#lead_sensor_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#ligand_cds -->
+
+    <owl:Class rdf:about="#ligand_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#ligase_enzyme_cds -->
+
+    <owl:Class rdf:about="#ligase_enzyme_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#light_reporter_function -->
+
+    <owl:Class rdf:about="#light_reporter_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#light_sensor_function -->
+
+    <owl:Class rdf:about="#light_sensor_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#linker_proteindomain -->
+
+    <owl:Class rdf:about="#linker_proteindomain">
+        <rdfs:subClassOf rdf:resource="#proteindomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#localization_proteindomain -->
+
+    <owl:Class rdf:about="#localization_proteindomain">
+        <rdfs:subClassOf rdf:resource="#proteindomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#low_copynumber_plasmidbackbone -->
+
+    <owl:Class rdf:about="#low_copynumber_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#luxr_cellsignalling_function -->
+
+    <owl:Class rdf:about="#luxr_cellsignalling_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#lysis_cds -->
+
+    <owl:Class rdf:about="#lysis_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#lysis_enzyme_cds -->
+
+    <owl:Class rdf:about="#lysis_enzyme_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#lysis_membrane_cds -->
+
+    <owl:Class rdf:about="#lysis_membrane_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#m13_primer -->
+
+    <owl:Class rdf:about="#m13_primer">
+        <rdfs:subClassOf rdf:resource="#primer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#measurement_plasmid -->
+
+    <owl:Class rdf:about="#measurement_plasmid">
+        <rdfs:subClassOf rdf:resource="#plasmid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#measurement_plasmid_classic -->
+
+    <owl:Class rdf:about="#measurement_plasmid_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#medium_copynumber_plasmidbackbone -->
+
+    <owl:Class rdf:about="#medium_copynumber_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#membrane_cds -->
+
+    <owl:Class rdf:about="#membrane_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#methylation_enzyme_cds -->
+
+    <owl:Class rdf:about="#methylation_enzyme_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#mflorum_prokaryote_chassis -->
+
+    <owl:Class rdf:about="#mflorum_prokaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#miscellaneous_chassis -->
+
+    <owl:Class rdf:about="#miscellaneous_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#miscellaneous_constitutive_prokaryote_rbs -->
+
+    <owl:Class rdf:about="#miscellaneous_constitutive_prokaryote_rbs">
+        <rdfs:subClassOf rdf:resource="#rbs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#miscellaneous_constitutive_prokaryotic_rbs -->
+
+    <owl:Class rdf:about="#miscellaneous_constitutive_prokaryotic_rbs">
+        <rdfs:subClassOf rdf:resource="#rbs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#miscellaneous_rnap -->
+
+    <owl:Class rdf:about="#miscellaneous_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#mismatchrepair_function -->
+
+    <owl:Class rdf:about="#mismatchrepair_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#motility_function -->
+
+    <owl:Class rdf:about="#motility_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#multihost_chassis -->
+
+    <owl:Class rdf:about="#multihost_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#multiple_regulation -->
+
+    <owl:Class rdf:about="#multiple_regulation">
+        <rdfs:subClassOf rdf:resource="#regulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#multiple_reporter_classic -->
+
+    <owl:Class rdf:about="#multiple_reporter_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#negative_regulation -->
+
+    <owl:Class rdf:about="#negative_regulation">
+        <rdfs:subClassOf rdf:resource="#regulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#negativeregulator_regulation -->
+
+    <owl:Class rdf:about="#negativeregulator_regulation">
+        <rdfs:subClassOf rdf:resource="#regulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#none_standard -->
+
+    <owl:Class rdf:about="#none_standard">
+        <rdfs:subClassOf rdf:resource="#standard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#nucleotide_dna -->
+
+    <owl:Class rdf:about="#nucleotide_dna">
+        <rdfs:subClassOf rdf:resource="#dna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#odor_function -->
+
+    <owl:Class rdf:about="#odor_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#odorant_biosynthesis_function -->
+
+    <owl:Class rdf:about="#odorant_biosynthesis_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#operation_plasmidbackbone -->
+
+    <owl:Class rdf:about="#operation_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#origami_dna -->
+
+    <owl:Class rdf:about="#origami_dna">
+        <rdfs:subClassOf rdf:resource="#dna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#origin_component_plasmid -->
+
+    <owl:Class rdf:about="#origin_component_plasmid">
+        <rdfs:subClassOf rdf:resource="#plasmid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#other_component_plasmid -->
+
+    <owl:Class rdf:about="#other_component_plasmid">
+        <rdfs:subClassOf rdf:resource="#plasmid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#other_regulatory_classic -->
+
+    <owl:Class rdf:about="#other_regulatory_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#p22_recombination_function -->
+
+    <owl:Class rdf:about="#p22_recombination_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#pananatis_prokaryote_chassis -->
+
+    <owl:Class rdf:about="#pananatis_prokaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#pananatis_prokaryote_ribosome -->
+
+    <owl:Class rdf:about="#pananatis_prokaryote_ribosome">
+        <rdfs:subClassOf rdf:resource="#ribosome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#phosphorylation_enzyme_cds -->
+
+    <owl:Class rdf:about="#phosphorylation_enzyme_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#phycocyanobilin_biosynthesis_function -->
+
+    <owl:Class rdf:about="#phycocyanobilin_biosynthesis_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#pichia_eukaryote_chassis -->
+
+    <owl:Class rdf:about="#pichia_eukaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#pichia_eukaryote_rnap -->
+
+    <owl:Class rdf:about="#pichia_eukaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#plasmid -->
+
+    <owl:Class rdf:about="#plasmid">
+        <rdfs:subClassOf rdf:resource="#Plasmid"/>
+        <rdfs:subClassOf rdf:resource="#plasmid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#plasmidbackbone -->
+
+    <owl:Class rdf:about="#plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#Vector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#plasmids_generator_classic -->
+
+    <owl:Class rdf:about="#plasmids_generator_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#plastic_biosynthesis_function -->
+
+    <owl:Class rdf:about="#plastic_biosynthesis_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#pmirabilis_prokaryote_chassis -->
+
+    <owl:Class rdf:about="#pmirabilis_prokaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#pmirabilis_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#pmirabilis_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#positive_regulation -->
+
+    <owl:Class rdf:about="#positive_regulation">
+        <rdfs:subClassOf rdf:resource="#regulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#pputida_prokaryote_chassis -->
+
+    <owl:Class rdf:about="#pputida_prokaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#pputida_prokaryote_ribosome -->
+
+    <owl:Class rdf:about="#pputida_prokaryote_ribosome">
+        <rdfs:subClassOf rdf:resource="#ribosome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#pputida_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#pputida_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#prc_generator_classic -->
+
+    <owl:Class rdf:about="#prc_generator_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#prct_generator_classic -->
+
+    <owl:Class rdf:about="#prct_generator_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#pret_reporter_classic -->
+
+    <owl:Class rdf:about="#pret_reporter_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#primer -->
+
+    <owl:Class rdf:about="#primer"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#primerbindingsite_component_plasmid -->
+
+    <owl:Class rdf:about="#primerbindingsite_component_plasmid">
+        <rdfs:subClassOf rdf:resource="#plasmid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#primerbindingsite_dna -->
+
+    <owl:Class rdf:about="#primerbindingsite_dna">
+        <rdfs:subClassOf rdf:resource="#dna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#promoter -->
+
+    <owl:Class rdf:about="#promoter">
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000167"/>
+        <rdfs:subClassOf rdf:resource="#promoter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#promoter_libraryscreening_plasmidbackbone -->
+
+    <owl:Class rdf:about="#promoter_libraryscreening_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#protease_enzyme_cds -->
+
+    <owl:Class rdf:about="#protease_enzyme_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#proteindomain -->
+
+    <owl:Class rdf:about="#proteindomain">
+        <rdfs:subClassOf rdf:resource="#proteindomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#proteinfusion_plasmidbackbone -->
+
+    <owl:Class rdf:about="#proteinfusion_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#proteintag -->
+
+    <owl:Class rdf:about="#proteintag">
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000324"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#pump_membrane_cds -->
+
+    <owl:Class rdf:about="#pump_membrane_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#pyocyanin_biosynthesis_function -->
+
+    <owl:Class rdf:about="#pyocyanin_biosynthesis_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#rackham_constitutive_prokaryote_rbs -->
+
+    <owl:Class rdf:about="#rackham_constitutive_prokaryote_rbs">
+        <rdfs:subClassOf rdf:resource="#rbs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#rbs -->
+
+    <owl:Class rdf:about="#rbs">
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000552"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#rbscodingsequence_libraryscreening_plasmidbackbone -->
+
+    <owl:Class rdf:about="#rbscodingsequence_libraryscreening_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#rc_generator_classic -->
+
+    <owl:Class rdf:about="#rc_generator_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#rct_generator_classic -->
+
+    <owl:Class rdf:about="#rct_generator_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#receiver -->
+
+    <owl:Class rdf:about="#receiver">
+        <rdfs:subClassOf rdf:resource="#receiver"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#receiver_signalling_classic -->
+
+    <owl:Class rdf:about="#receiver_signalling_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#receptor_cds -->
+
+    <owl:Class rdf:about="#receptor_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#receptor_membrane_cds -->
+
+    <owl:Class rdf:about="#receptor_membrane_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#recombination_function -->
+
+    <owl:Class rdf:about="#recombination_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#regulation -->
+
+    <owl:Class rdf:about="#regulation"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#reporter_classic -->
+
+    <owl:Class rdf:about="#reporter_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#reporter_function -->
+
+    <owl:Class rdf:about="#reporter_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#repression_proteindomain -->
+
+    <owl:Class rdf:about="#repression_proteindomain">
+        <rdfs:subClassOf rdf:resource="#proteindomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#repressor_transcriptionalregulator_cds -->
+
+    <owl:Class rdf:about="#repressor_transcriptionalregulator_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#restriction_endonuclease_enzyme_cds -->
+
+    <owl:Class rdf:about="#restriction_endonuclease_enzyme_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#restrictionsite_dna -->
+
+    <owl:Class rdf:about="#restrictionsite_dna">
+        <rdfs:subClassOf rdf:resource="#dna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#ret_reporter_classic -->
+
+    <owl:Class rdf:about="#ret_reporter_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#reuphora_prokaryote_chassis -->
+
+    <owl:Class rdf:about="#reuphora_prokaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#reuphora_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#reuphora_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#reverse_direction -->
+
+    <owl:Class rdf:about="#reverse_direction">
+        <rdfs:subClassOf rdf:resource="#direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#rhll_cellsignalling_function -->
+
+    <owl:Class rdf:about="#rhll_cellsignalling_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#rhlr_cellsignalling_function -->
+
+    <owl:Class rdf:about="#rhlr_cellsignalling_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#ribosome -->
+
+    <owl:Class rdf:about="#ribosome"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#rnap -->
+
+    <owl:Class rdf:about="#rnap"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#rnap_enzyme_cds -->
+
+    <owl:Class rdf:about="#rnap_enzyme_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#rnapolymerase_enzyme_cds -->
+
+    <owl:Class rdf:about="#rnapolymerase_enzyme_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#salmonella_prokaryote_chassis -->
+
+    <owl:Class rdf:about="#salmonella_prokaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#salmonella_prokaryote_ribosome -->
+
+    <owl:Class rdf:about="#salmonella_prokaryote_ribosome">
+        <rdfs:subClassOf rdf:resource="#ribosome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#salmonella_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#salmonella_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sandbox_ucsf_igem2007 -->
+
+    <owl:Class rdf:about="#sandbox_ucsf_igem2007">
+        <rdfs:subClassOf rdf:resource="#igem2007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#scar_dna -->
+
+    <owl:Class rdf:about="#scar_dna">
+        <rdfs:subClassOf rdf:resource="#dna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#selectionmarker_cds -->
+
+    <owl:Class rdf:about="#selectionmarker_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sender_signalling_classic -->
+
+    <owl:Class rdf:about="#sender_signalling_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sequencing_part_primer -->
+
+    <owl:Class rdf:about="#sequencing_part_primer">
+        <rdfs:subClassOf rdf:resource="#primer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sespanaensis_prokaryote_chassis -->
+
+    <owl:Class rdf:about="#sespanaensis_prokaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sespanaensis_prokaryote_ribosome -->
+
+    <owl:Class rdf:about="#sespanaensis_prokaryote_ribosome">
+        <rdfs:subClassOf rdf:resource="#ribosome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sigma24_ecoli_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#sigma24_ecoli_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sigma25_ecoli_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#sigma25_ecoli_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sigma32_ecoli_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#sigma32_ecoli_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sigma54_ecoli_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#sigma54_ecoli_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sigma54_vharveyi_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#sigma54_vharveyi_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sigma70_ecoli_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#sigma70_ecoli_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sigmaa_subtilis_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#sigmaa_subtilis_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sigmab_subtilis_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#sigmab_subtilis_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sigmas_ecoli_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#sigmas_ecoli_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#single_terminator -->
+
+    <owl:Class rdf:about="#single_terminator">
+        <rdfs:subClassOf rdf:resource="#terminator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sp6_bacteriophage_rnap -->
+
+    <owl:Class rdf:about="#sp6_bacteriophage_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sp6_plasmid -->
+
+    <owl:Class rdf:about="#sp6_plasmid">
+        <rdfs:subClassOf rdf:resource="#plasmid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#sp6_primer -->
+
+    <owl:Class rdf:about="#sp6_primer">
+        <rdfs:subClassOf rdf:resource="#primer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#spacer_dna -->
+
+    <owl:Class rdf:about="#spacer_dna">
+        <rdfs:subClassOf rdf:resource="#dna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#special_internal_proteindomain -->
+
+    <owl:Class rdf:about="#special_internal_proteindomain">
+        <rdfs:subClassOf rdf:resource="#proteindomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#standard -->
+
+    <owl:Class rdf:about="#standard"/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#stresskit_promoter -->
+
+    <owl:Class rdf:about="#stresskit_promoter">
+        <rdfs:subClassOf rdf:resource="#promoter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#structures_function -->
+
+    <owl:Class rdf:about="#structures_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#subtilis_prokaryote_chassis -->
+
+    <owl:Class rdf:about="#subtilis_prokaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#synechocystis_prokaryote_chassis -->
+
+    <owl:Class rdf:about="#synechocystis_prokaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#synechocystis_prokaryote_rnap -->
+
+    <owl:Class rdf:about="#synechocystis_prokaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#synthesis_plasmidbackbone -->
+
+    <owl:Class rdf:about="#synthesis_plasmidbackbone">
+        <rdfs:subClassOf rdf:resource="#plasmidbackbone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#t2_t3 -->
+
+    <owl:Class rdf:about="#t2_t3">
+        <rdfs:subClassOf rdf:resource="#t3"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#t3 -->
+
+    <owl:Class rdf:about="#t3">
+        <rdfs:subClassOf rdf:resource="#t3"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#t3_primer -->
+
+    <owl:Class rdf:about="#t3_primer">
+        <rdfs:subClassOf rdf:resource="#primer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#t4_bacteriophage_chassis -->
+
+    <owl:Class rdf:about="#t4_bacteriophage_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#t4_t3 -->
+
+    <owl:Class rdf:about="#t4_t3">
+        <rdfs:subClassOf rdf:resource="#t3"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#t7_bacteriophage_chassis -->
+
+    <owl:Class rdf:about="#t7_bacteriophage_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#t7_bacteriophage_rnap -->
+
+    <owl:Class rdf:about="#t7_bacteriophage_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#t7_expression_plasmid -->
+
+    <owl:Class rdf:about="#t7_expression_plasmid">
+        <rdfs:subClassOf rdf:resource="#plasmid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#t7_primer -->
+
+    <owl:Class rdf:about="#t7_primer">
+        <rdfs:subClassOf rdf:resource="#primer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#tail_proteindomain -->
+
+    <owl:Class rdf:about="#tail_proteindomain">
+        <rdfs:subClassOf rdf:resource="#proteindomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#terminator -->
+
+    <owl:Class rdf:about="#terminator">
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000614"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#test1 -->
+
+    <owl:Class rdf:about="#test1">
+        <rdfs:subClassOf rdf:resource="#test1"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#tn5_transposome_dna -->
+
+    <owl:Class rdf:about="#tn5_transposome_dna">
+        <rdfs:subClassOf rdf:resource="#dna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#transcriptional_regulation_function -->
+
+    <owl:Class rdf:about="#transcriptional_regulation_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#transcriptionalregulator -->
+
+    <owl:Class rdf:about="#transcriptionalregulator">
+        <rdfs:subClassOf rdf:resource="#transcriptionalregulator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#transcriptionalregulator_cds -->
+
+    <owl:Class rdf:about="#transcriptionalregulator_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#transmembrane_proteindomain -->
+
+    <owl:Class rdf:about="#transmembrane_proteindomain">
+        <rdfs:subClassOf rdf:resource="#proteindomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#transporter_membrane_cds -->
+
+    <owl:Class rdf:about="#transporter_membrane_cds">
+        <rdfs:subClassOf rdf:resource="#cds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#transposon_dna -->
+
+    <owl:Class rdf:about="#transposon_dna">
+        <rdfs:subClassOf rdf:resource="#dna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#tumorkillingbacteria_function -->
+
+    <owl:Class rdf:about="#tumorkillingbacteria_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#uncategorized_composite_classic -->
+
+    <owl:Class rdf:about="#uncategorized_composite_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#uncategorized_device_classic -->
+
+    <owl:Class rdf:about="#uncategorized_device_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#uncategorized_generator_classic -->
+
+    <owl:Class rdf:about="#uncategorized_generator_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#uncategorized_intermediate_classic -->
+
+    <owl:Class rdf:about="#uncategorized_intermediate_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#uncategorized_inverter_classic -->
+
+    <owl:Class rdf:about="#uncategorized_inverter_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#uncategorized_measurement_classic -->
+
+    <owl:Class rdf:about="#uncategorized_measurement_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#uncategorized_other_classic -->
+
+    <owl:Class rdf:about="#uncategorized_other_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#uncategorized_plasmid_classic -->
+
+    <owl:Class rdf:about="#uncategorized_plasmid_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#uncategorized_project_classic -->
+
+    <owl:Class rdf:about="#uncategorized_project_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#uncategorized_rbs_classic -->
+
+    <owl:Class rdf:about="#uncategorized_rbs_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#uncategorized_regulatory_classic -->
+
+    <owl:Class rdf:about="#uncategorized_regulatory_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#uncategorized_rna_classic -->
+
+    <owl:Class rdf:about="#uncategorized_rna_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#uncategorized_temporary_classic -->
+
+    <owl:Class rdf:about="#uncategorized_temporary_classic">
+        <rdfs:subClassOf rdf:resource="#classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#unknown_regulation -->
+
+    <owl:Class rdf:about="#unknown_regulation">
+        <rdfs:subClassOf rdf:resource="#regulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#ustc_logic_promoter -->
+
+    <owl:Class rdf:about="#ustc_logic_promoter">
+        <rdfs:subClassOf rdf:resource="#promoter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#vharveyi_prokaryote_chassis -->
+
+    <owl:Class rdf:about="#vharveyi_prokaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#xer_recombination_function -->
+
+    <owl:Class rdf:about="#xer_recombination_function">
+        <rdfs:subClassOf rdf:resource="#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#yeast_eukaryote_chassis -->
+
+    <owl:Class rdf:about="#yeast_eukaryote_chassis">
+        <rdfs:subClassOf rdf:resource="#chassis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#yeast_eukaryote_ribosome -->
+
+    <owl:Class rdf:about="#yeast_eukaryote_ribosome">
+        <rdfs:subClassOf rdf:resource="#ribosome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#yeast_eukaryote_rnap -->
+
+    <owl:Class rdf:about="#yeast_eukaryote_rnap">
+        <rdfs:subClassOf rdf:resource="#rnap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#yfp_reporter_primer -->
+
+    <owl:Class rdf:about="#yfp_reporter_primer">
+        <rdfs:subClassOf rdf:resource="#primer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#Definition -->
+
+    <owl:Class rdf:about="&oboInOwl;Definition">
+        <obo:IAO_0000412 rdf:datatype="&xsd;anyURI"
+            >http://purl.org/obo/owl/SO</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid1 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A sequence_feature with an extent greater than zero. A nucleotide region is composed of bases and a polypeptide region is composed of amino acids.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid10 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A nucleotide sequence that may be used to identify a larger sequence.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid11 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >Region of sequence similarity by descent from a common ancestor.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid12 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A double-helical region of nucleic acid formed by base-pairing between adjacent (inverted) complementary sequences.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid13 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A region of a gene.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid14 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A region of an mRNA.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid15 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >The sequence of DNA located either at the end of the transcript that causes RNA polymerase to terminate transcription.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid16 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A folded sequence.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid17 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >An extent of biological sequence.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid18 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A contiguous sequence which begins with, and includes, a start codon and ends with, and includes, a stop codon.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid19 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A DNA sequence that controls the expression of a gene.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid2 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A sequence variant that changes one or more sequence features.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid20 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A short oligonucleotide sequence, of length on the order of 10&#39;s of bases; either single or double stranded.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid21 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >First codon to be translated by a ribosome.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid22 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A set of (usually) three nucleotide bases in a DNA or RNA sequence, which together code for a unique amino acid or the termination of translation and are contained within the CDS.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid23 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A region defined by its disposition to be involved in a biological process.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid24 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A regulatory_region that modulates the transcription of a gene or genes.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid25 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A region of a mature transcript.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid26 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A folded RNA sequence.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid27 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A sequence_alteration is a sequence_feature whose extent is the deviation from another sequence.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid28 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A region on the surface of a molecule that may interact with another molecule. When applied to polypeptides: Amino acids involved in binding or interactions. It can also apply to an amino acid bond which is represented by the positions of the two flanking amino acids.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid29 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >In mRNA, a set of three nucleotides that indicates the end of information for protein synthesis.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid3 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A region of a CDS.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid30 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A region which is intended for use in an experiment.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid31 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A sequence variant that does not affect protein function. Silent mutations may occur in genic ( CDS, UTR, intron etc) and intergenic regions. Silent mutations may have affects on processes such as splicing and regulation.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid32 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A region of a molecule that binds a TF complex [GO:0005667].</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid33 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A region which is the result of some arbitrary experimental procedure. The procedure may be carried out with biological material or inside a computer.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid34 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A region in the 5&#39; UTR that pairs with the 16S rRNA during formation of the preinitiation complex.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid35 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A terminator signal for bacterial transcription.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid36 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >Non-covalent primer binding site for initiation of replication, transcription, or reverse transcription.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid37 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >Sequence of about 100 nucleotides of A added to the 3&#39; end of most eukaryotic mRNAs.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid38 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A sequence_variant is a non exact copy of a sequence_feature or genome exhibiting one or more sequence_alteration.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid39 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >Region in mRNA where ribosome assembles.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid4 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A region of a molecule that binds to a protein.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid40 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid41 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid42 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid43 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid44 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid45 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid46 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid47 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid48 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid49 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid5 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A regulatory_region composed of the TSS(s) and binding sites for TF_complexes of the basal transcription machinery.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid50 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid51 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid52 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid53 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid54 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid55 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid56 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid57 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid58 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid59 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid6 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A region of a transcript.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid60 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid61 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid62 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid63 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid64 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid65 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid66 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid67 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid68 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid69 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid7 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >The origin of replication; starting site for duplication of a nucleic acid molecule to give two identical copies.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid70 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid71 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid72 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid73 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid74 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid75 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid76 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid77 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid78 -->
+
+    <oboInOwl:Definition/>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid8 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A sequence used in experiment.</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://sbol.bhi.washington.edu/rdf/sbol.owl#genid9 -->
+
+    <rdf:Description>
+        <rdfs:label xml:lang="en"
+            >A regulatory element of an operon to which activators or repressors bind thereby effecting translation of genes in that operon.</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

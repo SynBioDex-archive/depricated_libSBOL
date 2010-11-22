@@ -1,0 +1,471 @@
+LOCUS       NM_001042683            7345 bp    mRNA    linear   PRI 04-JUL-2010
+DEFINITION  Homo sapiens SNF2 histone linker PHD RING helicase (SHPRH),
+            transcript variant 1, mRNA.
+ACCESSION   NM_001042683
+VERSION     NM_001042683.2  GI:289547540
+KEYWORDS    .
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 7345)
+  AUTHORS   Rose,J. Phd, Behm,F.M. Cra, Drgon,T. Phd, Johnson,C. Ms and Uhl GR
+            Md,Phd.
+  TITLE     Personalized smoking cessation: interactions between nicotine dose,
+            dependence and quit success genotype score
+  JOURNAL   Mol. Med. (2010) In press
+   PUBMED   20379614
+  REMARK    GeneRIF: Clinical trial of gene-disease association and
+            gene-environment interaction. (HuGE Navigator)
+            Publication Status: Available-Online prior to print
+REFERENCE   2  (bases 1 to 7345)
+  AUTHORS   Motegi,A., Liaw,H.J., Lee,K.Y., Roest,H.P., Maas,A., Wu,X.,
+            Moinova,H., Markowitz,S.D., Ding,H., Hoeijmakers,J.H. and Myung,K.
+  TITLE     Polyubiquitination of proliferating cell nuclear antigen by HLTF
+            and SHPRH prevents genomic instability from stalled replication
+            forks
+  JOURNAL   Proc. Natl. Acad. Sci. U.S.A. 105 (34), 12411-12416 (2008)
+   PUBMED   18719106
+  REMARK    GeneRIF: HLTF and SHPRH are functional homologues of yeast Rad5
+            that cooperatively mediate PCNA polyubiquitination and maintain
+            genomic stability.
+REFERENCE   3  (bases 1 to 7345)
+  AUTHORS   Motegi,A., Sood,R., Moinova,H., Markowitz,S.D., Liu,P.P. and
+            Myung,K.
+  TITLE     Human SHPRH suppresses genomic instability through proliferating
+            cell nuclear antigen polyubiquitination
+  JOURNAL   J. Cell Biol. 175 (5), 703-708 (2006)
+   PUBMED   17130289
+  REMARK    GeneRIF: We report that a putative tumor suppressor gene, SHPRH, is
+            a human orthologue of yeast RAD5.The yRad5/SHPRH-dependent pathway
+            is a conserved and fundamental DNA repair mechanism that protects
+            the genome from genotoxic stress.
+REFERENCE   4  (bases 1 to 7345)
+  AUTHORS   Unk,I., Hajdu,I., Fatyol,K., Szakal,B., Blastyak,A., Bermudez,V.,
+            Hurwitz,J., Prakash,L., Prakash,S. and Haracska,L.
+  TITLE     Human SHPRH is a ubiquitin ligase for Mms2-Ubc13-dependent
+            polyubiquitylation of proliferating cell nuclear antigen
+  JOURNAL   Proc. Natl. Acad. Sci. U.S.A. 103 (48), 18107-18112 (2006)
+   PUBMED   17108083
+  REMARK    GeneRIF: SHPRH function is an important deterrent to mutagenesis
+            and carcinogenesis in humans
+REFERENCE   5  (bases 1 to 7345)
+  AUTHORS   Sood,R., Makalowska,I., Galdzicki,M., Hu,P., Eddings,E.,
+            Robbins,C.M., Moses,T., Namkoong,J., Chen,S. and Trent,J.M.
+  TITLE     Cloning and characterization of a novel gene, SHPRH, encoding a
+            conserved putative protein with SNF2/helicase and PHD-finger
+            domains from the 6q24 region
+  JOURNAL   Genomics 82 (2), 153-161 (2003)
+   PUBMED   12837266
+  REMARK    GeneRIF: SHPRH maps to 6q24 and is a possible candidate for the
+            tumor suppressor gene reported from that region.
+COMMENT     VALIDATED REFSEQ: This record has undergone validation or
+            preliminary review. The reference sequence was derived from
+            AY163808.1, AY161136.1, BC117686.1, AK126959.1, AA315737.1 and
+            BX648322.1.
+            On Feb 24, 2010 this sequence version replaced gi:111548665.
+            
+            Summary: SHPRH is a ubiquitously expressed protein that contains
+            motifs characteristics of several DNA repair proteins,
+            transcription factors, and helicases. SHPRH is a functional homolog
+            of S. cerevisiae RAD5 (Unk et al., 2006 [PubMed
+            17108083]).[supplied by OMIM].
+            
+            Transcript Variant: This variant (1) represents the longer
+            transcript and encodes the longer isoform (a).
+            COMPLETENESS: complete on the 3' end.
+PRIMARY     REFSEQ_SPAN         PRIMARY_IDENTIFIER PRIMARY_SPAN        COMP
+            1-48                AY163808.1         1-48
+            49-3709             AY161136.1         1-3661
+            3710-4590           BC117686.1         3376-4256
+            4591-4694           AK126959.1         1856-1959
+            4695-4695           AA315737.1         262-262
+            4696-6291           AK126959.1         1961-3556
+            6292-7297           AY163808.1         5956-6961
+            7298-7345           BX648322.1         6431-6478
+FEATURES             Location/Qualifiers
+     source          1..7345
+                     /organism="Homo sapiens"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="6"
+                     /map="6q24.3"
+     gene            1..7345
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /note="SNF2 histone linker PHD RING helicase"
+                     /db_xref="GeneID:257218"
+                     /db_xref="HGNC:19336"
+                     /db_xref="MIM:608048"
+     exon            1..367
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=1
+     exon            368..1032
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=2
+     CDS             400..5451
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /note="isoform a is encoded by transcript variant 1;
+                     2610103K11Rik; SNF2, histone-linker, PHD and RING finger
+                     domain-containing helicase; E3 ubiquitin-protein ligase
+                     SHPRH"
+                     /codon_start=1
+                     /product="E3 ubiquitin-protein ligase SHPRH isoform a"
+                     /protein_id="NP_001036148.2"
+                     /db_xref="GI:289547541"
+                     /db_xref="CCDS:CCDS43513.1"
+                     /db_xref="GeneID:257218"
+                     /db_xref="HGNC:19336"
+                     /db_xref="MIM:608048"
+                     /translation="MSSRRKRAPPVRVDEEKRQQLHWNMHEDRRNEPIIISDDDEQPC
+                     PGSDTSSAHYIILSDSLKEEVAHRDKKRCSKVVSFSKPIEKEETVGIFSPLSVKLNIV
+                     ISPYHFDNSWKAFLGELTLQLLPAQSLIENFSERSITLMSSESSNQFLIYVHSKGEDV
+                     EKQKKEPMSICDKGILVESSFSGEMLEDLGWLQKKRRIKLYQKPEGNHIIKVGIYLLE
+                     AGLAKLDFLSDANSRMKKFNQLMKKVMEKLHNSIIPDVLEEDEDDPESEPEGQDIDEL
+                     YHFVKQTHQQETQSIQVDVQHPALIPVLRPYQREAVNWMLQQECFRSSPATESALHFL
+                     WREIVTSEGLKLYYNPYTGCIIREYPNSGPQLLGGILADEMGLGKTVEVLALILTHTR
+                     QDVKQDALTLPEGKVVNYFIPSHYFGGKLKKTEIQNIEFEPKEKVQCPPTRVMILTAV
+                     KEMNGKKGVSILSIYKYVSSIYRYDVQRNRSLLKRMLKCLIFEGLVKQIKGHGFSGTF
+                     TLGKNYKEEDICDKTKKQAVGSPRKIQKETRKSGNKDTDSEYLPSDTSDDDDDPYYYY
+                     YKSRRNRSKLRKKLVPSTKKGKSQPFINPDSQGHCPATSDSGITDVAMSKSTCISEFN
+                     QEHETEDCAESLNHADSDVPPSNTMSPFNTSDYRFECICGELDQIDRKPRVQCLKCHL
+                     WQHAKCVNYDEKNLKIKPFYCPHCLVAMEPVSTRATLIISPSSICHQWVDEINRHVRS
+                     SSLRVLVYQGVKKDGFLQPHFLAEQDIVIITYDVLRSELNYVDIPHSNSEDGRRLRNQ
+                     KRYMAIPSPLVAVEWWRICLDEAQMVECPTVKAAEMAQRLSGINRWCISGTPVQRGLE
+                     DLFGLVVFLGIEPYCVKHWWVRLLYRPYCKKNPQHLYSFIAKILWRSAKKDVIDQIQI
+                     PPQTEEIHWLHFSPVERHFYHRQHEVCCQDVVVKLRKISDWALKLSSLDRRTVTSILY
+                     PLLRLRQACCHPQAVRGEFLPLQKSTMTMEELLTSLQKKCGTECEEAHRQLVCALNGL
+                     AGIHIIKGEYALAAELYREVLRSSEEHKGKLKTDSLQRLHATHNLMELLIARHPGIPP
+                     TLRDGRLEEEAKQLREHYMSKCNTEVAEAQQALYPVQQTIHELQRKIHSNSPWWLNVI
+                     HRAIEFTIDEELVQRVRNEITSNYKQQTGKLSMSEKFRDCRGLQFLLTTQMEELNKCQ
+                     KLVREAVKNLEGPPSRNVIESATVCHLRPARLPLNCCVFCKADELFTEYESKLFSNTV
+                     KGQTAIFEEMIEDEEGLVDDRAPTTTRGLWAISETERSMKAILSFAKSHRFDVEFVDE
+                     GSTSMDLFEAWKKEYKLLHEYWMALRNRVSAVDELAMATERLRVRDPREPKPNPPVLH
+                     IIEPHEVEQNRIKLLNDKAVATSQLQKKLGQLLYLTNLEKSQDKTSGGVNPEPCPICA
+                     RQLGKQWAVLTCGHCFCNECISIIIEQYSVGSHRSSIKCAICRQTTSHKEISYVFTSE
+                     KANQEEDIPVKGSHSTKVEAVVRTLMKIQLRDPGAKALVFSTWQDVLDIISKALTDNN
+                     MEFAQISRVKTFQENLSAFKRDPQINILLLPLHTGSNGLTIIEATHVLLVEPILNPAH
+                     ELQAIGRVHRIGQTKPTIVHRFLIKATIEERMQAMLKTAERSHTNSSAKHSEASVLTV
+                     ADLADLFTKETEELE"
+     exon            1033..1162
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=3
+     exon            1163..1381
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=4
+     exon            1382..1460
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=5
+     exon            1461..1611
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=6
+     exon            1612..1720
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=7
+     exon            1721..1977
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=8
+     exon            1978..2637
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=9
+     exon            2638..2889
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=10
+     exon            2890..2968
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=11
+     exon            2969..3132
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=12
+     exon            3133..3389
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=13
+     exon            3390..3511
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=14b
+     exon            3512..3600
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=15
+     exon            3601..3693
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=16
+     exon            3694..3801
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=17
+     exon            3802..3944
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=18
+     exon            3945..4118
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=19a
+     exon            4119..4181
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=20
+     exon            4182..4407
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=21
+     exon            4408..4551
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=22
+     exon            4552..4653
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=23
+     exon            4654..4725
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=24
+     exon            4726..4914
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=25
+     exon            4915..5007
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=26
+     exon            5008..5094
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=27
+     exon            5095..5273
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=28
+     exon            5274..5354
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=29
+     exon            5355..7335
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /inference="alignment:Splign"
+                     /number=30a
+     STS             6932..7054
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /standard_name="RH93573"
+                     /db_xref="UniSTS:88438"
+     STS             7030..7120
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /standard_name="SHGC-64749"
+                     /db_xref="UniSTS:95405"
+     STS             7033..7199
+                     /gene="SHPRH"
+                     /gene_synonym="bA545I5.2; FLJ27258; FLJ37625; FLJ45012;
+                     FLJ90837; KIAA2023; MGC134886"
+                     /standard_name="STS-N20832"
+                     /db_xref="UniSTS:37287"
+ORIGIN      
+        1 gtctttggcc tccgggacca gggagggagg acgctggttg tcctggagcc cgggaagctc
+       61 aagggctgag agggagccgc tgcgcgagtc ttccccacct cttcccgatc ccggactagc
+      121 gaacttcgga ccaccacgtc cctccgggga taaagtgggg tcgtgggaaa ggaggctgtg
+      181 cttctcctca tgcactgggg cctgcggtgt ttgtctcgag cgtccaacac actaggatcc
+      241 gggagtccgt cgtcacgctc cttggcctcg cggtcgcttg tttgctcggc ctgctgggag
+      301 cgatccggcg ctgacagccc cgctcagact ccgggagccg cttgtgggtc tttcggaaga
+      361 taactgaagt tcacagttac cagccaagaa aacttgaaaa tgagcagccg acggaaacgt
+      421 gctcctccag tgagggtaga tgaggaaaag aggcagcagc ttcattggaa tatgcatgag
+      481 gacagaagga atgaacctat catcataagt gatgatgacg agcagccctg cccaggttca
+      541 gatacctctt ctgctcatta tatcattcta agtgatagtc taaaggaaga agtggctcac
+      601 agagataaga agaggtgttc aaaagtggtg agcttctcaa aaccaattga aaaagaagag
+      661 actgttggta ttttttcccc tttgtctgta aagttaaata ttgtgatttc tccctatcat
+      721 tttgataatt cctggaaagc atttctagga gaattaactc ttcagcttct tcctgcacag
+      781 agtttaattg aaaatttttc cgaaaggagt attacattga tgagttcaga gtcaagcaat
+      841 cagttcctga tttatgttca ttcaaaaggt gaagatgtag agaaacaaaa aaaagaaccg
+      901 atgagtattt gtgacaaggg tattctggtg gagtcatcct tcagtggtga aatgttagaa
+      961 gatttggggt ggctacaaaa gaagagaaga ataaaactct atcagaaacc agaaggaaat
+     1021 cacattatca aggttggaat ttatcttttg gaagctggcc tagcaaaact agacttcttg
+     1081 agtgatgcaa attcaagaat gaaaaagttc aatcagctca tgaagaaagt aatggaaaag
+     1141 ttacacaatt ctattattcc agatgtgttg gaagaggatg aagatgatcc ggagagtgag
+     1201 ccagagggac aagacattga cgagctgtat cactttgtga aacaaacaca tcagcaagaa
+     1261 acgcagtcca tccaagtgga tgtccagcat cctgcattga tccctgtgtt gagaccctac
+     1321 caaagagagg ctgtcaattg gatgctacaa caagagtgtt tcagaagcag tcctgctact
+     1381 gaaagtgccc tgcacttctt atggcgagag attgttacat ctgagggtct gaaactctac
+     1441 tataatccat atacaggctg catcattcgt gagtacccaa attctgggcc gcagttgctt
+     1501 ggtggaattt tagcagatga gatgggtctt ggaaagacag tggaggtttt ggctctgatt
+     1561 ctgacacata ctcgacaaga tgtcaagcaa gatgctctca ctcttcccga gggaaaagtg
+     1621 gtgaattatt ttattccgtc acattatttt ggaggaaaac tgaaaaagac agaaatccag
+     1681 aatatcgaat ttgaaccaaa agaaaaagtt caatgccctc ctacacgtgt gatgatactg
+     1741 acagctgtga aagaaatgaa tggaaaaaaa ggagtgtcca tcctttccat ctataagtat
+     1801 gtcagttcta tatatagata cgatgttcaa cggaacagga gtcttttgaa acggatgctg
+     1861 aaatgtttaa tttttgaagg tctcgtgaaa cagatcaaag gccatggttt ttctgggact
+     1921 tttacattgg gaaagaatta caaggaagag gatatatgtg ataaaacaaa aaagcaggca
+     1981 gtagggagtc caaggaaaat tcagaaagaa actagaaaat cagggaacaa ggacacagat
+     2041 tctgaatact tgccatcaga cacctctgat gatgatgatg atccttacta ttattattat
+     2101 aagtccagga gaaatcgcag taaattgagg aaaaagcttg ttccatccac aaaaaaagga
+     2161 aaaagtcaac catttatcaa tcccgattca caaggtcact gtccagctac tagcgactct
+     2221 ggaataactg atgttgctat gtctaaaagt acatgtatct ctgaattcaa ccaagaacat
+     2281 gaaacagagg actgtgctga atctctaaat catgctgata gtgatgtacc accttctaat
+     2341 accatgagtc cctttaacac ctctgattac cgctttgagt gtatatgtgg tgaacttgat
+     2401 cagatagatc gtaagcctcg tgttcaatgc ctgaagtgtc acctgtggca acatgcaaag
+     2461 tgtgtgaatt atgatgagaa aaatctgaag atcaagcctt tttactgccc ccactgcctt
+     2521 gttgcaatgg aaccagtgtc aacaagagca actctgatca tctctccaag ttccatctgt
+     2581 caccagtggg tggatgagat caacaggcat gtgaggtcgt catctcttcg agtcttggta
+     2641 tatcaaggag tgaagaaaga tggcttttta caacctcatt ttttggcaga acaggatata
+     2701 gttatcatta cctatgatgt actgcgttca gaattaaatt atgtcgatat cccacatagc
+     2761 aatagtgagg atgggcgtcg cctacggaac cagaagcgct atatggctat cccgagcccc
+     2821 ctggtagctg tggagtggtg gaggatctgc cttgatgaag ctcagatggt tgagtgtccc
+     2881 acagtaaaag ctgcagaaat ggcccagcgt ttgagtggga ttaatcgatg gtgtatcagt
+     2941 ggcactccag tacagagagg attagaggat ctttttgggt tagtggtctt tcttggtatt
+     3001 gaaccttact gtgtcaaaca ctggtgggtt cgacttctct atcggcctta ctgcaagaag
+     3061 aatcctcagc atctctacag ctttattgcc aagatactgt ggaggtctgc aaagaaagat
+     3121 gtgattgacc aaatccaaat accaccacaa accgaagaaa tacactggct ccacttttct
+     3181 ccagtggaaa ggcatttcta tcaccgtcag catgaggtgt gctgccagga tgtggtggta
+     3241 aaactcagga agatttctga ctgggctctg aagctcagca gcctagacag aaggactgtc
+     3301 acctctatcc tgtatccatt gctgaggctc agacaggcct gctgtcaccc acaggctgtt
+     3361 cgtggagagt tcttgccact ccaaaaaagc accatgacaa tggaagagct gctgacatct
+     3421 ttgcagaaga aatgtggaac tgaatgtgaa gaagcacatc gacagctagt ttgtgctctc
+     3481 aatggcttag caggcattca tattattaaa ggtgagtatg ccttggcagc agaattgtac
+     3541 agagaagtgt tgcgctcctc ggaggaacac aaaggaaaac tcaaaactga ttcacttcaa
+     3601 agacttcatg ctacccataa cttgatggaa ttgttgatag ccaggcaccc agggatacca
+     3661 cctaccttgc gtgatggccg acttgaggaa gaggccaaac agctgcgaga gcactacatg
+     3721 agcaagtgta atacagaagt tgctgaagcc cagcaagctt tatatcctgt gcagcagacc
+     3781 atccatgagc ttcaaagaaa gattcattct aattctcctt ggtggctaaa tgtgatccac
+     3841 agagcaatag aatttactat tgatgaggag ctagttcagc gagtgcgaaa tgaaataacc
+     3901 agcaactaca agcaacaaac tggcaagctt tctatgtcag agaagttccg tgattgcaga
+     3961 ggtcttcagt tcttacttac aacacaaatg gaagagctaa ataaatgcca gaagctagta
+     4021 agagaggctg taaaaaacct ggagggacct ccatctcgta atgttattga gtctgcaaca
+     4081 gtctgtcacc tccgaccagc cagacttcct ctcaactgct gtgtcttttg taaagctgat
+     4141 gaattgttca cagagtatga atcaaagcta ttttccaaca cagtcaaagg ccagactgca
+     4201 atatttgagg agatgataga agatgaagaa ggactggtgg atgatcgagc acctaccacc
+     4261 acccggggtc tctgggcaat aagtgagaca gagcgatcta tgaaagcaat actatcattt
+     4321 gcaaaatcac ataggtttga tgttgaattt gttgatgaag gaagcacttc aatggatctc
+     4381 tttgaagcat ggaagaagga atataagttg cttcatgaat attggatggc tctgaggaat
+     4441 cgtgtgtctg ctgttgatga acttgcaatg gctacagaac gactaagagt gcgtgatcct
+     4501 agggagccaa agcctaatcc gcctgttctt catatcattg aaccacatga ggtagaacaa
+     4561 aaccgaataa aactactaaa tgataaagct gttgctacat cacagcttca gaaaaaactt
+     4621 gggcagcttc tttacctaac taatttggag aagtctcaag ataaaacatc gggaggtgtt
+     4681 aatccagaac cttgcccaat ctgtgctcga cagctaggaa aacagtgggc ggtactgacc
+     4741 tgtggtcact gtttctgtaa tgaatgcatt tctataatta ttgaacaata cagcgtggga
+     4801 tctcacagaa gctccattaa gtgtgcaatc tgccgccaga ccacatctca caaagaaatc
+     4861 tcgtatgtct ttacctcaga gaaagcaaac caggaggagg acatccctgt gaagggcagc
+     4921 cattctacaa aagtggaagc tgtggtcaga actctgatga aaatacagct tagagatcca
+     4981 ggggccaaag cactcgtttt ctcaacgtgg caagatgtat tagatattat ttcaaaagct
+     5041 cttactgaca acaacatgga atttgcacaa atcagtcgtg ttaagacatt tcaggagaac
+     5101 ctttcagcat ttaaacgtga tccccaaatc aatattttgc tgctgcccct gcacacaggt
+     5161 tctaatggat taactatcat tgaagcaact catgttctct tggtggagcc catattgaac
+     5221 cctgcccatg agcttcaggc catagggagg gtgcaccgaa ttggacagac aaaacctact
+     5281 attgtacaca gattcttaat taaagcaaca atagaagaaa gaatgcaggc aatgctgaaa
+     5341 actgctgaga gaagtcacac gaactcatca gcaaagcatt cagaggcctc tgtcttgact
+     5401 gtggctgacc tggcagacct atttaccaaa gaaactgaag agcttgaatg aactacactt
+     5461 gattcattcc atggacttta gtgtattaat aaactttcat agctgtagag caaagttaca
+     5521 agttttaaaa acccagtaga taacagtaac actgttccta gttgaatgaa tttgtttatt
+     5581 gttctggtta tacagtggct tagtacttat tgagtccttt tcaatatact gtttccaaaa
+     5641 gatctataaa gattcttaat tttacactcc taataaaaca tttatttttt gtcccaaata
+     5701 gtatctatat ctgatgatgc aagggaatta agagaggtaa tgtgtacttt tcttatgata
+     5761 agatcactca taaaacagtt ggaataagaa agtaaactag tctagtttta tatgacctgg
+     5821 tatattgaac aaacatagat ctcagttttg gaagggcctt cagtatcttt agcacatgat
+     5881 tcaccaatat cttgttagta atattttaag tagatggtga attatattaa cccatttttt
+     5941 gagtaggctt ataccataac tttacaccta gtaattttgc agtaatacaa ctccttacaa
+     6001 taagttaatg ttagacagtt atttgtttct tctgcatctt gctactgaaa acaaaaacaa
+     6061 tgaaaatatt catatttcta ttatgtgtaa agtggtgtta gtgtaaacag ttaactccaa
+     6121 atagattttt taatgtatta atgattacct taaaattatc tgctttccct actcttaatt
+     6181 tttcttattg ttaaagtttt tatatgttgt aagattgatg tatctgtaaa tattgcagtt
+     6241 tttatgattt tgttttatta taacatggaa atatggcagg gttttttttt taatcattat
+     6301 tatactgatg tcttggattc tttttctttc ccatgttctt gtgtaactag actttttagc
+     6361 cagtgatatc tgaattcatg gtagagttgt tatttcactc cagttgttcc tcccttaagc
+     6421 acgagtcttt gaccttttga acaagagaat gccatgttca cataagcaaa tcgttgcaag
+     6481 tgataataac gaagtgtttc ttcttctgtg aggaattaat ggactttgaa attgctgaat
+     6541 aaggagtagc ttgttacatc ctagccattt gatgtaatac aaatgttctt atttggcttc
+     6601 cttttctttg agccttcaga gttttaaagg accctctttg accctcagga cttattagct
+     6661 cccagttagc tgcctggaaa actcatagaa ccattcccta gatcccattt gtccgagagg
+     6721 ctttggtgct tagttaaggt gcattttctt actctaggtt tatagagtga tgtaattcaa
+     6781 ctgaagaaaa cacacacatg cttttggtgc ttattcttca gttaaaagga ggtatccatt
+     6841 gattctttta tatgaaatta aatcaaactg ttatttttat agctcttcac atattaaaaa
+     6901 gagctttcat gtacatttac gtgtttaatt tacccaacaa tcttgtgaag ttgatataat
+     6961 taatatcttt actgttttaa aggtagagaa ctgaagttca gatatattga aactttctta
+     7021 ggacatgtag caagtaaaca gtggagccca ggtcccctga ctccatatct tacattcttt
+     7081 tactaataac atgtcatgct gagattcaga aggcccatgc ttataattta aaaatgagac
+     7141 tatttcagta tttctttgtg tttgttttct actattcctt tctgagctat gttttagaga
+     7201 aaacaatttg atatgcttca attttgtaaa atcaaattac atatatataa aaaaacctat
+     7261 ctgtattaga caaaaactgt ttttatttat ttctgtaaga tatccattaa ataaatattt
+     7321 tagtggaaat gaaaaaaaaa aaaaa
+//
+
