@@ -9,17 +9,17 @@ package libSBOL;
  *
  * @author mgaldzic
  */
-class SequenceFeature extends SBOLbase{
+public class SequenceFeature extends SBOLbase{
     public String name;
     public String shortDescription;
-    public String Type;
+    public String type;
 
     public String getType() {
-        return Type;
+        return type;
     }
 
-    public void setType(String Type) {
-        this.Type = Type;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getName() {

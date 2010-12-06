@@ -2,20 +2,14 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package libSBOL;
 
-import java.io.BufferedReader;
-
-import java.util.List;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+/**
+ *
+ * @author mgaldzic
+ */
+import java.util.ArrayList;
 import java.util.Iterator;
-
-import org.biojavax.SimpleNamespace;
-import org.biojavax.bio.seq.RichSequence;
-import org.biojavax.bio.seq.RichSequenceIterator;
-
 import org.biojava.bio.Annotation;
 import org.biojava.bio.seq.Feature;
 import org.biojava.bio.seq.FeatureFilter;
@@ -24,13 +18,11 @@ import org.biojavax.Note;
 import org.biojavax.RichAnnotation;
 import org.biojavax.RichObjectFactory;
 import org.biojavax.bio.seq.RichFeature;
+import org.biojavax.bio.seq.RichSequence;
 import org.biojavax.ontology.ComparableTerm;
 
-/**
- *
- * @author mgaldzic
- */
-public class Part extends SBOLbase{
+public class Part extends SBOLbase {
+
     public String uri;
     public String id;
     public String name;
@@ -45,94 +37,145 @@ public class Part extends SBOLbase{
     public String nickname;
     public String subClassOf;
     public String dnaSequence;
-    public List <SequenceAnnotation> annotation;
+    public ArrayList<SequenceAnnotation> annotation;
 
-    public void readinGBfile (String filename) {
-        BufferedReader br = null;
-        SimpleNamespace ns = null;
-        String fileString = filename;
-        try {
-            br = new BufferedReader(new FileReader(fileString));
-        } catch (FileNotFoundException fnfe) {
-            System.out.println("FileNotFoundException: " + fnfe);
-        }
-        try {
-            ns = new SimpleNamespace("bioJavaNS");
-            //Make a biojava.RichSequenceObject
-            RichSequenceIterator rsi = RichSequence.IOTools.readGenbankDNA(br, ns);
-            while (rsi.hasNext()) {
-                RichSequence rs = rsi.nextRichSequence();
-                System.out.println(rs.getName());
-                name = rs.getName();
-                shortDescription = rs.getDescription();
-                dnaSequence = rs.seqString();
-                System.out.println("SBOLname: "+name);
-                System.out.println("SBOLdescription: "+shortDescription);
-                System.out.println("SBOL seq: "+dnaSequence);
+    public Part(String uri, String id, String name, String shortDescription, String longDescription, String date, String author, String type, String status, String owner_id, String principal_investigator, String nickname, String subClassOf, String dnaSequence, ArrayList<SequenceAnnotation> annotation) {
+        this.uri = uri;
+        this.id = id;
+        this.name = name;
+        this.shortDescription = shortDescription;
+        this.longDescription = longDescription;
+        this.date = date;
+        this.author = author;
+        this.type = type;
+        this.status = status;
+        this.owner_id = owner_id;
+        this.principal_investigator = principal_investigator;
+        this.nickname = nickname;
+        this.subClassOf = subClassOf;
+        this.dnaSequence = dnaSequence;
+        this.annotation = annotation;
+    }
 
-                Annotation anno = rs.getAnnotation();
-                for (Iterator i = anno.keys().iterator(); i.hasNext();) {
-                    Object key = i.next();
-                    System.out.println(key + " : " + anno.getProperty(key));
-                }
-                System.out.println(rs.toString() + " " + rs.getFeatureSet());
-                //Filter the sequence on CDS features
-                //FeatureFilter ff = new FeatureFilter.ByType("misc_feature");
-                //FeatureHolder fh = rs.filter(ff);
-                FeatureHolder fh = rs.filter(FeatureFilter.all);
-                //Iterate through the features (all, could be filtered specifically by type)
-                System.out.println("");
-                for (Iterator<Feature> i = fh.features(); i.hasNext();) {
-                    RichFeature rf = (RichFeature) i.next();
+    public Part() {
+        this.uri = "";
+        this.id = "";
+        this.name = "";
+        this.shortDescription = null;
+        this.longDescription = null;
+        this.date = null;
+        this.author = null;
+        this.type = null;
+        this.status = null;
+        this.owner_id = null;
+        this.principal_investigator = null;
+        this.nickname = null;
+        this.subClassOf = null;
+        this.dnaSequence = null;
+        this.annotation = null;
+    }
 
-                    //Get the strand orientation of the feature
-                    char featureStrand = rf.getStrand().getToken();
+    public void readRichSequence(RichSequence rs) {
+        //The main GenBank Record can be found by the following
+        name = rs.getName();
+        shortDescription = rs.getDescription();
+        dnaSequence = rs.seqString();
+        System.out.println("SBOLname: " + name);
+        
+        //Now iterate through the features (all)
+        FeatureHolder fh = rs.filter(FeatureFilter.all);
+        System.out.println("Features");
+        for (Iterator<Feature> i = fh.features(); i.hasNext();) {
+            SequenceAnnotation anot = new SequenceAnnotation();
+            RichFeature rf = (RichFeature) i.next();
 
-                    //Get the location of the feature
-                    String featureLocation = rf.getLocation().toString();
+            SequenceFeature feat = new SequenceFeature();
+            feat.setType(rf.getType());
+            System.out.println("featkey: "+feat.type);
 
-                    //Get the annotation of the feature
-                    RichAnnotation ra = (RichAnnotation) rf.getAnnotation();
 
-                    //Use BioJava defined ComparableTerms
-                    ComparableTerm geneTerm = new RichSequence.Terms().getGeneNameTerm();
-                    ComparableTerm synonymTerm = new RichSequence.Terms().getGeneSynonymTerm();
-                    //Create the required additional ComparableTerms
-                    ComparableTerm labelTerm = RichObjectFactory.getDefaultOntology().getOrCreateTerm("label");
-                    ComparableTerm productTerm = RichObjectFactory.getDefaultOntology().getOrCreateTerm("product");
-                    ComparableTerm proteinIDTerm = RichObjectFactory.getDefaultOntology().getOrCreateTerm("protein_id");
+            //Get the location of the feature
+            anot.setStart(rf.getLocation().getMin());
+            System.out.println("start: "+anot.start);
+            anot.setStop(rf.getLocation().getMax());
+            System.out.println("stop: "+anot.stop);
+            
+            //Get the strand orientation of the feature
+            char featureStrand = rf.getStrand().getToken();
+            anot.setStrand(featureStrand);
+            System.out.println("Strand: "+featureStrand);
+            //Get the annotation of the feature
+            RichAnnotation ra = (RichAnnotation) rf.getAnnotation();
 
-                    //Create empty strings
-
-                    String label = "";
-                    //Iterate through the notes in the annotation
-                    for (Iterator<Note> it = ra.getNoteSet().iterator(); it.hasNext();) {
-                        Note note = it.next();
-                        label = note.getValue().toString();
-                        //Outout the feature information
-                        System.out.println(note.getTerm() + " : " + label);
-                    }
-                }
-            //add part to SBOL JSON conversion here
+            String label = "";
+            //Iterate through the notes in the annotation
+            
+            for (Iterator<Note> it = ra.getNoteSet().iterator(); it.hasNext();) {
+                Note n = it.next();
+                String key = n.getTerm().getName();
+                String value = n.getValue();
+                int rank = n.getRank();
+                // print the qualifier out in key=value (rank) format
+                //System.out.println(key+"="+value+" ("+rank+")");
+                if (key.equals("label"))
+                    feat.setName(value);
+                if (key.equals("gene"))
+                    feat.setName(value);
             }
-        } catch (Exception be) {
-            be.printStackTrace();
-            System.exit(-1);
+            System.out.println("name : " + feat.name);
+            System.out.println("\n");
+            anot.addFeature(feat);
+            this.addAnnotation(anot);
+        }
+        //add part to SBOL JSON conversion here
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Part) {
+            Part anotherPart = (Part) obj;
+            boolean uriOK = anotherPart.getUri().equals(this.uri);
+            //System.out.println("uri: "+anotherPart.getUri()+this.uri);
+            boolean idOK = anotherPart.getId().equals(this.id);
+            //System.out.println("id: "+anotherPart.getId()+this.id);
+            boolean nameOK = anotherPart.getName().equals(this.name);
+            boolean dnaOK = anotherPart.getDnaSequence().equals(this.dnaSequence);
+            if (uriOK && idOK && nameOK && dnaOK) //if (idOK && nameOK && dnaOK)
+            {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
         }
     }
 
-    public List <SequenceAnnotation> getAnnotation() {
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 67 * hash + (this.uri != null ? this.uri.hashCode() : 0);
+        hash = 67 * hash + (this.id != null ? this.id.hashCode() : 0);
+        hash = 67 * hash + (this.name != null ? this.name.hashCode() : 0);
+        hash = 67 * hash + (this.dnaSequence != null ? this.dnaSequence.hashCode() : 0);
+        return hash;
+    }
+
+    public ArrayList<SequenceAnnotation> getAnnotation() {
         return annotation;
     }
 
-    public void setAnnotation(List newannotation) {
+    public void setAnnotation(ArrayList newannotation) {
         this.annotation = newannotation;
     }
 
     public void addAnnotation(SequenceAnnotation newannotation) {
+        if (this.annotation == null){
+            annotation = new ArrayList<SequenceAnnotation>();
+        }
         this.annotation.add(newannotation);
     }
-    
+
     public String getAuthor() {
         return author;
     }
@@ -244,5 +287,4 @@ public class Part extends SBOLbase{
     public void setUri(String uri) {
         this.uri = uri;
     }
-
 }

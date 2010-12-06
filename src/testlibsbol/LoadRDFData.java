@@ -49,7 +49,7 @@ public class LoadRDFData {
                     if (dataprops.get(expression) != null) {
                         for (OWLLiteral referstovalue : dataprops.get(expression)) {
                             values.add(referstovalue.getLiteral());
-                            System.out.println("referstovalue :"+ referstovalue.getLiteral());
+                            System.out.println("referstovalue :" + referstovalue.getLiteral());
                         }
                     }
                 }
@@ -111,6 +111,4 @@ public class LoadRDFData {
 
         return values;
     }
-}
-
 }

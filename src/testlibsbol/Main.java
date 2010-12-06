@@ -5,6 +5,10 @@
 package testlibsbol;
 
 import java.io.BufferedReader;
+import libSBOL.Part;
+import libSBOL.SBOLutils;
+import org.biojavax.SimpleNamespace;
+import org.biojavax.bio.seq.RichSequence;
 
 
 /**
@@ -19,9 +23,16 @@ public class Main {
     public static void main(String[] args) {
 
         //fileString = "pFab1.str";
-        fileString = "B0015.ape";
+        //String fileString = "B0015.ape";
 
-
+        String fileString = "BFa_1.15.gb";
+        //stuff needed for Rich Sequence intialization a precondition of this test
+        BufferedReader br = null;
+        SimpleNamespace ns = null;
+        ns = new SimpleNamespace("bioJavaNS");
+        RichSequence rs = SBOLutils.readinGBfile(fileString);
+        Part instance = new Part();
+        instance.readRichSequence(rs);
 
         //sequences = RichSequence.IOTools.readGenbankDNA(new BufferedReader (new StringReader(fileString)), ns);
 
