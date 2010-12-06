@@ -4,12 +4,12 @@
  */
 package testlibsbol;
 
+import com.google.gson.Gson;
 import java.io.BufferedReader;
 import libSBOL.Part;
 import libSBOL.SBOLutils;
 import org.biojavax.SimpleNamespace;
 import org.biojavax.bio.seq.RichSequence;
-
 
 /**
  *
@@ -33,7 +33,9 @@ public class Main {
         RichSequence rs = SBOLutils.readinGBfile(fileString);
         Part instance = new Part();
         instance.readRichSequence(rs);
-
+        String jsonSBOL = instance.toJson();
+        System.out.println("json SBOL form:\n"+jsonSBOL);
+        
         //sequences = RichSequence.IOTools.readGenbankDNA(new BufferedReader (new StringReader(fileString)), ns);
 
         /*

@@ -8,18 +8,16 @@ package libSBOL;
  *
  * @author mgaldzic
  */
+import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.Iterator;
-import org.biojava.bio.Annotation;
 import org.biojava.bio.seq.Feature;
 import org.biojava.bio.seq.FeatureFilter;
 import org.biojava.bio.seq.FeatureHolder;
 import org.biojavax.Note;
 import org.biojavax.RichAnnotation;
-import org.biojavax.RichObjectFactory;
 import org.biojavax.bio.seq.RichFeature;
 import org.biojavax.bio.seq.RichSequence;
-import org.biojavax.ontology.ComparableTerm;
 
 public class Part extends SBOLbase {
 
@@ -129,7 +127,13 @@ public class Part extends SBOLbase {
         }
         //add part to SBOL JSON conversion here
     }
-
+    public String toJson() {
+        // converting to JSON
+        Gson gson = new Gson();
+        String json = gson.toJson(this);
+        System.out.println("js "+json);
+        return json;
+    }
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Part) {

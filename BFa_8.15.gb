@@ -1,0 +1,81 @@
+LOCUS       BFa_8.15                2670 bp    DNA     circular     null
+ACCESSION   BFa_8
+VERSION     BFa_8.15
+KEYWORDS    .
+COMMENT     The genetic constructs used here are taken or composed from
+            available, well known genetic elements.  At this time BIOFAB staff
+            have not yet taken care to define the precise functional boundaries
+            of these genetic elements.  Thus, for example, a part labeled as a
+            "promoter" may include sequences encoding all or part of a 5' UTR
+            downstream of a transcription start site. And so on. Part of the
+            mission of the BIOFAB is to define compatible sets of genetic
+            objects with precise and composable boundaries. Such well engineered
+            parts will be noted once available.
+FEATURES             Location/Qualifiers
+     source          1..2670
+                     /mol_type="other DNA"
+                     /plasmid="VKM81"
+                     /strain="BW25113"
+     promoter        127..181
+                     /biofab_id="BFA_8"
+                     /label=pLux
+     RBS             186..211
+                     /biofab_id="BFA_15"
+                     /label=Anderson_RBS
+     CDS             212..925
+                     /gene="sfGFP"
+     terminator      953..1081
+                     /label=dbI_terminator
+     rep_origin      1088..1799
+                     /label=p15a
+     terminator      1890..1995
+                     /label=To_terminator
+     CDS             2011..2670
+                     /gene="cmR2"
+ORIGIN
+        1 tttagcttcc ttagctcctg aaaatctcga taactcaaaa aatacgcccg gtagtgatct
+       61 tatttcatta tggtgaaagt tggaacctct tacgtgccga tcaacgtctc attttcgcca
+      121 gatatcacct gtaggatcgt acaggtttac gcaagaaaat ggtttgttat agtcgaataa
+      181 atttgtctag agaaagaggg gacaaactag tatgagcaaa ggagaagaac ttttcactgg
+      241 agttgtccca attcttgttg aattagatgg tgatgttaat gggcacaaat tttctgtccg
+      301 tggagagggt gaaggtgatg ctacaaacgg aaaactcacc cttaaattta tttgcactac
+      361 tggaaaacta cctgttccgt ggccaacact tgtcactact ctgacctatg gtgttcaatg
+      421 cttttcccgt tatccggatc acatgaaacg gcatgacttt ttcaagagtg ccatgcccga
+      481 aggttatgta caggaacgca ctatatcttt caaagatgac gggacctaca agacgcgtgc
+      541 tgaagtcaag tttgaaggtg atacccttgt taatcgtatc gagttaaagg gtattgattt
+      601 taaagaagat ggaaacattc ttggacacaa actcgagtac aactttaact cacacaatgt
+      661 atacatcacg gcagacaaac aaaagaatgg aatcaaagct aacttcaaaa ttcgccacaa
+      721 cgttgaagat ggttccgttc aactagcaga ccattatcaa caaaatactc caattggcga
+      781 tggccctgtc cttttaccag acaaccatta cctgtcgaca caatctgtcc tttcgaaaga
+      841 tcccaacgaa aagcgtgacc acatggtcct tcttgagttt gtaactgctg ctgggattac
+      901 acatggcatg gatgagctct acaaataagg atccaaactc gagtaaggat ctccaggcat
+      961 caaataaaac gaaaggctca gtcgaaagac tgggcctttc gttttatctg ttgtttgtcg
+     1021 gtgaacgctc tctactagag tcacactggc tcaccttcgg gtgggccttt ctgcgtttat
+     1081 acctagggat atattccgct tcctcgctca ctgactcgct acgctcggtc gttcgactgc
+     1141 ggcgagcgga aatggcttac gaacggggcg gagatttcct ggaagatgcc aggaagatac
+     1201 ttaacaggga agtgagaggg ccgcggcaaa gccgtttttc cataggctcc gcccccctga
+     1261 caagcatcac gaaatctgac gctcaaatca gtggtggcga aacccgacag gactataaag
+     1321 ataccaggcg tttccccctg gcggctccct cgtgcgctct cctgttcctg cctttcggtt
+     1381 taccggtgtc attccgctgt tatggccgcg tttgtctcat tccacgcctg acactcagtt
+     1441 ccgggtaggc agttcgctcc aagctggact gtatgcacga accccccgtt cagtccgacc
+     1501 gctgcgcctt atccggtaac tatcgtcttg agtccaaccc ggaaagacat gcaaaagcac
+     1561 cactggcagc agccactggt aattgattta gaggagttag tcttgaagtc atgcgccggt
+     1621 taaggctaaa ctgaaaggac aagttttggt gactgcgctc ctccaagcca gttacctcgg
+     1681 ttcaaagagt tggtagctca gagaaccttc gaaaaaccgc cctgcaaggc ggttttttcg
+     1741 ttttcagagc aagagattac gcgcagacca aaacgatctc aagaagatca tcttattaat
+     1801 cagataaaat atttctagat ttcagtgcaa tttatctctt caaatgtagc acctgaagtc
+     1861 agccccatac gatataagtt gttactagtg cttggattct caccaataaa aaacgcccgg
+     1921 cggcaaccga gcgttctgaa caaatccaga tggagttctg aggtcattac tggatctatc
+     1981 aacaggagtc caagcgagct cgatatcaaa ttacgccccg ccctgccact catcgcagta
+     2041 ctgttgtaat tcattaagca ttctgccgac atggaagcca tcacaaacgg catgatgaac
+     2101 ctgaatcgcc agcggcatca gcaccttgtc gccttgcgta taatatttgc ccatggtgaa
+     2161 aacgggggcg aagaagttgt ccatattggc cacgtttaaa tcaaaactgg tgaaactcac
+     2221 ccagggattg gctgagacga aaaacatatt ctcaataaac cctttaggga aataggccag
+     2281 gttttcaccg taacacgcca catcttgcga atatatgtgt agaaactgcc ggaaatcgtc
+     2341 gtggtattca ctccagagcg atgaaaacgt ttcagtttgc tcatggaaaa cggtgtaaca
+     2401 agggtgaaca ctatcccata tcaccagctc accgtctttc attgccatac gaaattccgg
+     2461 atgagcattc atcaggcggg caagaatgtg aataaaggcc ggataaaact tgtgcttatt
+     2521 tttctttacg gtctttaaaa aggccgtaat atccagctga acggtctggt tataggtaca
+     2581 ttgagcaact gactgaaatg cctcaaaatg ttctttacga tgccattggg atatatcaac
+     2641 ggtggtatat ccagtgattt ttttctccat
+//
