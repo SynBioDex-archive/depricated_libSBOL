@@ -2,10 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package libSBOL;
 
-import java.util.List;
+
+import org.biojavax.bio.seq.RichSequence;
+import org.biojavax.SimpleNamespace;
+import java.io.BufferedReader;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -19,6 +21,8 @@ import static org.junit.Assert.*;
  */
 public class PartTest {
 
+private Part tp;
+private RichSequence rs;
     public PartTest() {
     }
 
@@ -32,6 +36,25 @@ public class PartTest {
 
     @Before
     public void setUp() {
+        // input for test
+        String testfileString = "B0015.ape";
+        //stuff needed for Rich Sequence intialization a precondition of this test
+        BufferedReader br = null;
+        SimpleNamespace ns = null;
+        ns = new SimpleNamespace("bioJavaNS");
+        rs = SBOLutils.readinGBfile(testfileString);
+        //A Test Part
+        tp = new Part(); //test part
+        //tp.setUri("http://sbolstandard.org/sbpkb/B0015");
+        //tp.setId("B0015");
+        tp.setName("B0015");
+        tp.setShortDescription("B0015");
+        tp.setLongDescription("Very popular transcriptional terminator");
+        //tp.setDate("11-Aug-2009");
+        tp.setAuthor("");
+        tp.setType("terminator");
+        tp.setNickname("B0015");
+        tp.setDnaSequence("ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctactagagtcacactggctcaccttcgggtgggcctttctgcgtttata");
     }
 
     @After
@@ -39,22 +62,35 @@ public class PartTest {
     }
 
     /**
-     * Test of getAnnotation method, of class Part.
+     * Test of readRichSequence method, of class Part.
+     * This test doesn't do anything particularly useful because the Part p.equals() method is weak
      */
     @Test
+    public void testReadRichSequence() {
+        System.out.println("readRichSequence");
+        Part instance = new Part();
+        instance.readRichSequence(rs);
+        Part result = instance;
+
+        Part expResult = tp;
+                
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+
+/**    @Test
     public void testGetAnnotation() {
         System.out.println("getAnnotation");
         Part instance = new Part();
-        List expResult = null;
+        Part expResult = tp;
         List result = instance.getAnnotation();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setAnnotation method, of class Part.
-     */
+   
     @Test
     public void testSetAnnotation() {
         System.out.println("setAnnotation");
@@ -65,9 +101,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of addAnnotation method, of class Part.
-     */
     @Test
     public void testAddAnnotation() {
         System.out.println("addAnnotation");
@@ -78,9 +111,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getAuthor method, of class Part.
-     */
     @Test
     public void testGetAuthor() {
         System.out.println("getAuthor");
@@ -92,9 +122,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setAuthor method, of class Part.
-     */
     @Test
     public void testSetAuthor() {
         System.out.println("setAuthor");
@@ -105,9 +132,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getDate method, of class Part.
-     */
     @Test
     public void testGetDate() {
         System.out.println("getDate");
@@ -119,9 +143,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setDate method, of class Part.
-     */
     @Test
     public void testSetDate() {
         System.out.println("setDate");
@@ -132,9 +153,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getDnaSequence method, of class Part.
-     */
     @Test
     public void testGetDnaSequence() {
         System.out.println("getDnaSequence");
@@ -146,9 +164,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setDnaSequence method, of class Part.
-     */
     @Test
     public void testSetDnaSequence() {
         System.out.println("setDnaSequence");
@@ -159,9 +174,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getId method, of class Part.
-     */
     @Test
     public void testGetId() {
         System.out.println("getId");
@@ -173,9 +185,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setId method, of class Part.
-     */
     @Test
     public void testSetId() {
         System.out.println("setId");
@@ -186,9 +195,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getLongDescription method, of class Part.
-     */
     @Test
     public void testGetLongDescription() {
         System.out.println("getLongDescription");
@@ -200,9 +206,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setLongDescription method, of class Part.
-     */
     @Test
     public void testSetLongDescription() {
         System.out.println("setLongDescription");
@@ -213,9 +216,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getName method, of class Part.
-     */
     @Test
     public void testGetName() {
         System.out.println("getName");
@@ -227,9 +227,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setName method, of class Part.
-     */
     @Test
     public void testSetName() {
         System.out.println("setName");
@@ -240,9 +237,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getNickname method, of class Part.
-     */
     @Test
     public void testGetNickname() {
         System.out.println("getNickname");
@@ -254,9 +248,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setNickname method, of class Part.
-     */
     @Test
     public void testSetNickname() {
         System.out.println("setNickname");
@@ -267,9 +258,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getOwner_id method, of class Part.
-     */
     @Test
     public void testGetOwner_id() {
         System.out.println("getOwner_id");
@@ -281,9 +269,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setOwner_id method, of class Part.
-     */
     @Test
     public void testSetOwner_id() {
         System.out.println("setOwner_id");
@@ -294,9 +279,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getPrincipal_investigator method, of class Part.
-     */
     @Test
     public void testGetPrincipal_investigator() {
         System.out.println("getPrincipal_investigator");
@@ -308,9 +290,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setPrincipal_investigator method, of class Part.
-     */
     @Test
     public void testSetPrincipal_investigator() {
         System.out.println("setPrincipal_investigator");
@@ -321,9 +300,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getShortDescription method, of class Part.
-     */
     @Test
     public void testGetShortDescription() {
         System.out.println("getShortDescription");
@@ -335,9 +311,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setShortDescription method, of class Part.
-     */
     @Test
     public void testSetShortDescription() {
         System.out.println("setShortDescription");
@@ -348,9 +321,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getStatus method, of class Part.
-     */
     @Test
     public void testGetStatus() {
         System.out.println("getStatus");
@@ -362,9 +332,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setStatus method, of class Part.
-     */
     @Test
     public void testSetStatus() {
         System.out.println("setStatus");
@@ -375,9 +342,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getSubClassOf method, of class Part.
-     */
     @Test
     public void testGetSubClassOf() {
         System.out.println("getSubClassOf");
@@ -389,9 +353,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setSubClassOf method, of class Part.
-     */
     @Test
     public void testSetSubClassOf() {
         System.out.println("setSubClassOf");
@@ -402,9 +363,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getType method, of class Part.
-     */
     @Test
     public void testGetType() {
         System.out.println("getType");
@@ -416,9 +374,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setType method, of class Part.
-     */
     @Test
     public void testSetType() {
         System.out.println("setType");
@@ -429,9 +384,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getUri method, of class Part.
-     */
     @Test
     public void testGetUri() {
         System.out.println("getUri");
@@ -443,9 +395,6 @@ public class PartTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setUri method, of class Part.
-     */
     @Test
     public void testSetUri() {
         System.out.println("setUri");
@@ -455,5 +404,5 @@ public class PartTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-
+ **/
 }
