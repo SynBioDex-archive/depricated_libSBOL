@@ -5,13 +5,29 @@
 
 package libSBOL;
 
+import com.clarkparsia.empire.annotation.Namespaces;
+import com.clarkparsia.empire.annotation.RdfProperty;
+import com.clarkparsia.empire.annotation.RdfsClass;
+
+import javax.persistence.Entity;
+
 /**
  *
  * @author mgaldzic
  */
+
+@Namespaces({"sbol", "http://sbols.org/core#"})
+@RdfsClass("sbol:SequenceAnnotation")
+@Entity
 public class SequenceFeature extends SBOLbase{
+
+    @RdfProperty("sbol:name")
     public String name;
+
+    @RdfProperty("sbol:shortDescription")
     public String shortDescription;
+
+    @RdfProperty("sbol:type")
     public String type;
 
     public String getType() {

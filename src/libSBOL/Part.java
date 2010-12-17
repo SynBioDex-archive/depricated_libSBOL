@@ -18,43 +18,85 @@ import org.biojavax.Note;
 import org.biojavax.RichAnnotation;
 import org.biojavax.bio.seq.RichFeature;
 import org.biojavax.bio.seq.RichSequence;
+import com.clarkparsia.empire.annotation.Namespaces;
+import com.clarkparsia.empire.annotation.RdfProperty;
+import com.clarkparsia.empire.annotation.RdfsClass;
 
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.FetchType;
+import javax.persistence.CascadeType;
+
+@Namespaces({"sbol", "http://sbols.org/core#"})
+@RdfsClass("sbol:Part")
+@Entity
 public class Part extends SBOLbase {
 
+    @RdfProperty("sbol:uri")
     public String uri;
+
+    @RdfProperty("sbol:id")
     public String id;
+
+    @RdfProperty("sbol:name")
     public String name;
+
+    @RdfProperty("sbol:shortDescription")
     public String shortDescription;
+
+    @RdfProperty("sbol:longDescription")
     public String longDescription;
+
+    @RdfProperty("sbol:date")
     public String date;
+
+    @RdfProperty("sbol:author")
     public String author;
+
+    @RdfProperty("sbol:type")
     public String type;
+
+    @RdfProperty("sbol:status")
     public String status;
+
+    @RdfProperty("sbol:owner_id")
     public String owner_id;
+
+    @RdfProperty("sbol:principal_investogator")
     public String principal_investigator;
+
+    @RdfProperty("sbol:nickname")
     public String nickname;
+
+    @RdfProperty("sbol:subClassOf")
     public String subClassOf;
+
+    @RdfProperty("sbol:dnaSequence")
     public String dnaSequence;
+
+    @OneToMany(fetch = FetchType.LAZY,
+    cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @RdfProperty("sbol:annotation")
     public ArrayList<SequenceAnnotation> annotation;
 
-    public Part(String uri, String id, String name, String shortDescription, String longDescription, String date, String author, String type, String status, String owner_id, String principal_investigator, String nickname, String subClassOf, String dnaSequence, ArrayList<SequenceAnnotation> annotation) {
-        this.uri = uri;
-        this.id = id;
-        this.name = name;
-        this.shortDescription = shortDescription;
-        this.longDescription = longDescription;
-        this.date = date;
-        this.author = author;
-        this.type = type;
-        this.status = status;
-        this.owner_id = owner_id;
-        this.principal_investigator = principal_investigator;
-        this.nickname = nickname;
-        this.subClassOf = subClassOf;
-        this.dnaSequence = dnaSequence;
-        this.annotation = annotation;
+    /**  public Part(String uri, String id, String name, String shortDescription, String longDescription, String date, String author, String type, String status, String owner_id, String principal_investigator, String nickname, String subClassOf, String dnaSequence, ArrayList<SequenceAnnotation> annotation) {
+    this.uri = uri;
+    this.id = id;
+    this.name = name;
+    this.shortDescription = shortDescription;
+    this.longDescription = longDescription;
+    this.date = date;
+    this.author = author;
+    this.type = type;
+    this.status = status;
+    this.owner_id = owner_id;
+    this.principal_investigator = principal_investigator;
+    this.nickname = nickname;
+    this.subClassOf = subClassOf;
+    this.dnaSequence = dnaSequence;
+    this.annotation = annotation;
     }
-
+     */
     public Part() {
         this.uri = "";
         this.id = "";

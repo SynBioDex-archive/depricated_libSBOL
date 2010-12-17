@@ -4,17 +4,37 @@
  */
 package libSBOL;
 
+import com.clarkparsia.empire.annotation.Namespaces;
+import com.clarkparsia.empire.annotation.RdfProperty;
+import com.clarkparsia.empire.annotation.RdfsClass;
 import java.util.ArrayList;
+
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.FetchType;
+import javax.persistence.CascadeType;
 
 /**
  *
  * @author mgaldzic
  */
+@Namespaces({"sbol", "http://sbols.org/core#"})
+@RdfsClass("sbol:SequenceAnnotation")
+@Entity
 public class SequenceAnnotation extends SBOLbase {
 
+    @RdfProperty("sbol:start")
     public Integer start;
+
+    @RdfProperty("sbol:stop")
     public Integer stop;
+
+    @RdfProperty("sbol:strand")
     public char strand;
+
+    @OneToMany(fetch = FetchType.LAZY,
+    cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @RdfProperty("sbol:feature")
     public ArrayList<SequenceFeature> feature;
 
     public SequenceAnnotation() {
