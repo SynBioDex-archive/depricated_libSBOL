@@ -79,7 +79,7 @@ public class Part extends SBOLbase {
         shortDescription = rs.getDescription();
         dnaSequence = rs.seqString();
         System.out.println("SBOLname: " + name);
-        
+
         //Now iterate through the features (all)
         FeatureHolder fh = rs.filter(FeatureFilter.all);
         System.out.println("Features");
@@ -89,25 +89,25 @@ public class Part extends SBOLbase {
 
             SequenceFeature feat = new SequenceFeature();
             feat.setType(rf.getType());
-            System.out.println("featkey: "+feat.type);
+            System.out.println("featkey: " + feat.type);
 
 
             //Get the location of the feature
             anot.setStart(rf.getLocation().getMin());
-            System.out.println("start: "+anot.start);
+            System.out.println("start: " + anot.start);
             anot.setStop(rf.getLocation().getMax());
-            System.out.println("stop: "+anot.stop);
-            
+            System.out.println("stop: " + anot.stop);
+
             //Get the strand orientation of the feature
             char featureStrand = rf.getStrand().getToken();
             anot.setStrand(featureStrand);
-            System.out.println("Strand: "+featureStrand);
+            System.out.println("Strand: " + featureStrand);
             //Get the annotation of the feature
             RichAnnotation ra = (RichAnnotation) rf.getAnnotation();
 
             String label = "";
             //Iterate through the notes in the annotation
-            
+
             for (Iterator<Note> it = ra.getNoteSet().iterator(); it.hasNext();) {
                 Note n = it.next();
                 String key = n.getTerm().getName();
@@ -115,10 +115,12 @@ public class Part extends SBOLbase {
                 int rank = n.getRank();
                 // print the qualifier out in key=value (rank) format
                 //System.out.println(key+"="+value+" ("+rank+")");
-                if (key.equals("label"))
+                if (key.equals("label")) {
                     feat.setName(value);
-                if (key.equals("gene"))
+                }
+                if (key.equals("gene")) {
                     feat.setName(value);
+                }
             }
             System.out.println("name : " + feat.name);
             System.out.println("\n");
@@ -127,24 +129,36 @@ public class Part extends SBOLbase {
         }
         //add part to SBOL JSON conversion here
     }
+
     public String toJson() {
         // converting to JSON
         Gson gson = new Gson();
         String json = gson.toJson(this);
-        System.out.println("js "+json);
+        System.out.println("js " + json);
         return json;
     }
+
+    public boolean isEmpty() {
+        this.isEmpty();
+
+        return true;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Part) {
             Part anotherPart = (Part) obj;
+            boolean dnaOK = true;
             boolean uriOK = anotherPart.getUri().equals(this.uri);
             //System.out.println("uri: "+anotherPart.getUri()+this.uri);
             boolean idOK = anotherPart.getId().equals(this.id);
             //System.out.println("id: "+anotherPart.getId()+this.id);
             boolean nameOK = anotherPart.getName().equals(this.name);
-            boolean dnaOK = anotherPart.getDnaSequence().equals(this.dnaSequence);
-            if (uriOK && idOK && nameOK && dnaOK) //if (idOK && nameOK && dnaOK)
+            if (this.dnaSequence != null) {
+                dnaOK = anotherPart.getDnaSequence().equals(this.dnaSequence);
+            }
+            //if ((uriOK && idOK && nameOK && dnaOK)|| (this.isEmpty() && anotherPart.isEmpty())) //if (idOK && nameOK && dnaOK)
+            if ((uriOK && idOK && nameOK && dnaOK)) //if (idOK && nameOK && dnaOK)
             {
                 return true;
             } else {
@@ -174,7 +188,7 @@ public class Part extends SBOLbase {
     }
 
     public void addAnnotation(SequenceAnnotation newannotation) {
-        if (this.annotation == null){
+        if (this.annotation == null) {
             annotation = new ArrayList<SequenceAnnotation>();
         }
         this.annotation.add(newannotation);

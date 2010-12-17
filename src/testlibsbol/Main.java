@@ -4,12 +4,16 @@
  */
 package testlibsbol;
 
-import com.google.gson.Gson;
 import java.io.BufferedReader;
 import libSBOL.Part;
 import libSBOL.SBOLutils;
+import org.biojava.bio.BioException;
+import org.biojava.bio.seq.DNATools;
+import org.biojava.bio.seq.Sequence;
+import org.biojava.bio.symbol.Alphabet;
 import org.biojavax.SimpleNamespace;
 import org.biojavax.bio.seq.RichSequence;
+import org.biojavax.bio.seq.SimpleRichSequence;
 
 /**
  *
@@ -20,7 +24,7 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws BioException {
 
         //fileString = "pFab1.str";
         //String fileString = "B0015.ape";
@@ -34,8 +38,10 @@ public class Main {
         Part instance = new Part();
         instance.readRichSequence(rs);
         String jsonSBOL = instance.toJson();
-        System.out.println("json SBOL form:\n"+jsonSBOL);
-        
+        System.out.println("json SBOL form:\n" + jsonSBOL);
+ 
+        //Object o =rse.getClass();
+
         //sequences = RichSequence.IOTools.readGenbankDNA(new BufferedReader (new StringReader(fileString)), ns);
 
         /*
